@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Infinite_Training\C_Sharp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Infinite_Training\C_Sharp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Infinite_Training\C_Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Infinite_Training\C_Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
