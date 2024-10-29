@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Output_parameters\Output_parameters\bin\Debug\Output_parameters.exe.config
+C:\Infinite_Training\C_Sharp\Output_parameters\Output_parameters\bin\Debug\Output_parameters.exe
+C:\Infinite_Training\C_Sharp\Output_parameters\Output_parameters\bin\Debug\Output_parameters.pdb
+C:\Infinite_Training\C_Sharp\Output_parameters\Output_parameters\obj\Debug\Output_parameters.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Output_parameters\Output_parameters\obj\Debug\Output_parameters.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Output_parameters\Output_parameters\obj\Debug\Output_parameters.exe
+C:\Infinite_Training\C_Sharp\Output_parameters\Output_parameters\obj\Debug\Output_parameters.pdb

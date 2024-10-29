@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Day1_Csharp\Day1_Csharp\bin\Debug\Day1_Csharp.exe.config
+C:\Infinite_Training\C_Sharp\Day1_Csharp\Day1_Csharp\bin\Debug\Day1_Csharp.exe
+C:\Infinite_Training\C_Sharp\Day1_Csharp\Day1_Csharp\bin\Debug\Day1_Csharp.pdb
+C:\Infinite_Training\C_Sharp\Day1_Csharp\Day1_Csharp\obj\Debug\Day1_Csharp.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Day1_Csharp\Day1_Csharp\obj\Debug\Day1_Csharp.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Day1_Csharp\Day1_Csharp\obj\Debug\Day1_Csharp.exe
+C:\Infinite_Training\C_Sharp\Day1_Csharp\Day1_Csharp\obj\Debug\Day1_Csharp.pdb
