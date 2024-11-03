@@ -19,31 +19,31 @@ namespace Assignment1
             Console.Write("Enter second value :");
             int value2 = Convert.ToInt32(Console.ReadLine());
 
-            switch(oper)
-            {
-                case '+':
-                    Console.WriteLine("add =" +(value1 + value2));
-                    Console.Read();
-                        break;
-                case '-':
-                    Console.WriteLine("substraction ="+ (value1 - value2));
-                    Console.Read();
-                    break;
-                case '*':
-                    Console.WriteLine("multiplication =" +(value1 * value2));
-                    Console.Read();
-                    break;
-                case '/':
-                    Console.WriteLine("division =" +(value1 / value2));
-                    Console.Read();
-                    break;
-                default:
-                    Console.WriteLine("Invalid statement");
-                    break;
-                    Console.Read();
+              switch(oper)
+               {
+                   case '+':
+                       Console.WriteLine("add =" +(value1 + value2));
+                       Console.Read();
+                           break;
+                   case '-':
+                       Console.WriteLine("substraction ="+ (value1 - value2));
+                       Console.Read();
+                       break;
+                   case '*':
+                       Console.WriteLine("multiplication =" +(value1 * value2));
+                       Console.Read();
+                       break;
+                   case '/':
+                       Console.WriteLine("division =" +(value1 / value2));
+                       Console.Read();
+                       break;
+                   default:
+                       Console.WriteLine("Invalid statement");
+                       break;  
+                       Console.Read();
 
 
-            }
+               }
         }
     }
 
