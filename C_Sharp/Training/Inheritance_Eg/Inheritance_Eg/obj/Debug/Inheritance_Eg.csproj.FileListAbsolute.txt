@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Inheritance_Eg\Inheritance_Eg\obj\Debug\Inheritance_Eg.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Inheritance_Eg\Inheritance_Eg\obj\Debug\Inheritance_Eg.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Inheritance_Eg\Inheritance_Eg\bin\Debug\Inheritance_Eg.exe.config
+C:\Infinite_Training\C_Sharp\Training\Inheritance_Eg\Inheritance_Eg\bin\Debug\Inheritance_Eg.exe
+C:\Infinite_Training\C_Sharp\Training\Inheritance_Eg\Inheritance_Eg\bin\Debug\Inheritance_Eg.pdb
+C:\Infinite_Training\C_Sharp\Training\Inheritance_Eg\Inheritance_Eg\obj\Debug\Inheritance_Eg.exe
+C:\Infinite_Training\C_Sharp\Training\Inheritance_Eg\Inheritance_Eg\obj\Debug\Inheritance_Eg.pdb

@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Unnary_operator\Unnary_operator\obj\Debug\Unnary_operator.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Unnary_operator\Unnary_operator\obj\Debug\Unnary_operator.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Unnary_operator\Unnary_operator\bin\Debug\Unnary_operator.exe.config
+C:\Infinite_Training\C_Sharp\Training\Unnary_operator\Unnary_operator\bin\Debug\Unnary_operator.exe
+C:\Infinite_Training\C_Sharp\Training\Unnary_operator\Unnary_operator\bin\Debug\Unnary_operator.pdb
+C:\Infinite_Training\C_Sharp\Training\Unnary_operator\Unnary_operator\obj\Debug\Unnary_operator.exe
+C:\Infinite_Training\C_Sharp\Training\Unnary_operator\Unnary_operator\obj\Debug\Unnary_operator.pdb

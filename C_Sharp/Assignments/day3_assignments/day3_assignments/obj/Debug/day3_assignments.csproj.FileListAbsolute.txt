@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Assignments\day3_assignments\day3_assignments\obj\Debug\day3_assignments.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Assignments\day3_assignments\day3_assignments\obj\Debug\day3_assignments.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Assignments\day3_assignments\day3_assignments\bin\Debug\day3_assignments.exe.config
+C:\Infinite_Training\C_Sharp\Assignments\day3_assignments\day3_assignments\bin\Debug\day3_assignments.exe
+C:\Infinite_Training\C_Sharp\Assignments\day3_assignments\day3_assignments\bin\Debug\day3_assignments.pdb
+C:\Infinite_Training\C_Sharp\Assignments\day3_assignments\day3_assignments\obj\Debug\day3_assignments.exe
+C:\Infinite_Training\C_Sharp\Assignments\day3_assignments\day3_assignments\obj\Debug\day3_assignments.pdb
