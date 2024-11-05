@@ -69,7 +69,7 @@ namespace day3_assignments
         {
             Console.WriteLine(" ");
             Console.WriteLine("*** Payment Details ***");
-            Console.WriteLine("In your A/c Sucessfully Deposited is {0}/-", Money);
+            Console.WriteLine("In your A/c Sucessfully Credited {0}/-", Money);
             Check_Balance();
         }
         public void Withdraw_Amount()
