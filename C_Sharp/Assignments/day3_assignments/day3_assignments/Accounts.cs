@@ -27,12 +27,9 @@ namespace day3_assignments
         }
         public void CustomerDetails()
             {
-
             Console.Write("Type of Transaction : ");
-                Transaction_type = Console.ReadLine();
-            
+            Transaction_type = Console.ReadLine();           
         }
-
             public void Show_data()
             {
                 Console.WriteLine(" ");
@@ -143,8 +140,6 @@ namespace day3_assignments
             Ac.CustomerDetails();
             Ac.Show_data();
             Ac.Type_of_Transaction();
-
-
             Console.ReadLine();
         }
     }
