@@ -69,16 +69,14 @@ namespace day3_assignments
 
             // -If marks of any one subject is less than 35 print result as failed
 
-            for (int i = 0; i < marks.Length; i++)
-            {
-                if (marks[i] < 35) Console.WriteLine("Fail");
-            }
-
             // -If marks of all subject is >35,but average is < 50 then also print result as failed
 
-            if (average < 50) Console.WriteLine("Fail");
-            else Console.WriteLine("Passed");
+            foreach(int i in marks)
+            {
+                if (marks[i] > 35) if (average > 50) Console.WriteLine("Pass");
+                    else Console.WriteLine("Fail");
 
+            }
         }
 
         public void DisplayData()
