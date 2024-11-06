@@ -27,8 +27,9 @@ namespace day3_assignments
         }
         public void Studentdetails()
         {
-            Console.WriteLine("Roll no : {0}",Rollno);
+            Console.WriteLine("*** Student Details ***");
             Console.WriteLine("Name : {0}",Name);
+            Console.WriteLine("Roll no : {0}",Rollno);
             Console.WriteLine("Class : {0}",Class);
             Console.WriteLine("Semester : {0}",Semester);
             Console.WriteLine("Branch : {0}",Branch);
@@ -37,24 +38,26 @@ namespace day3_assignments
 
     class Marks : Student
     {
+        public Marks(string roll_no, string name, string Std_class, string sem, string branch) : base(roll_no,  name, Std_class,  sem, branch)
+        {
+
+        }
         // -For marks write a method called GetMarks() and give marks for all 5 subjects
 
         public int[] marks = new int[5];
         public void Getmarks()
         {
-            float f = marks.Length;
             for (int i = 0; i < marks.Length; i++)
             {
                 Console.Write("Enter Subject {0} marks : ", i);
                 marks[i] = Convert.ToInt32(Console.ReadLine());
             }
         }
-    }
-    class Result : Marks
-    {
+  
         // Write a method called displayresult, which should calculate the average marks
         public void DisplayResult()
         {
+            Console.WriteLine(" ");
         int Total_marks = 0;
             for (int i = 0; i < marks.Length; i++)
             {
@@ -64,7 +67,7 @@ namespace day3_assignments
             Console.WriteLine("Total marks : {0} ", Total_marks);
             Console.WriteLine(" ");
             Console.WriteLine("*** Average percentage ***");
-            float average = (Total_marks / marks.Length);
+            float average = (Total_marks /marks.Length);
             Console.WriteLine("Average of all marks : {0}",average);
 
             // -If marks of any one subject is less than 35 print result as failed
@@ -73,9 +76,8 @@ namespace day3_assignments
 
             foreach(int i in marks)
             {
-                if (marks[i] > 35) if (average > 50) Console.WriteLine("Pass");
-                    else Console.WriteLine("Fail");
-
+                if (i > 35 && average > 50) Console.WriteLine("Pass");
+                else Console.WriteLine("Fail");
             }
         }
 
@@ -84,6 +86,7 @@ namespace day3_assignments
             Studentdetails();
             DisplayResult();
         }
+    
     }
     class Inheritance
     {
@@ -99,10 +102,12 @@ namespace day3_assignments
             string sem = Console.ReadLine();
             Console.Write("Enter Branch : ");
             string branch = Console.ReadLine();
-            Student std = new Student(Name, Rollno,Class,sem,branch);
-            Result result = new Result();
-            result.Getmarks();
-            result.DisplayData();
+            Marks mark = new Marks(Name, Rollno, Class, sem, branch);
+            Console.WriteLine(" ");
+            Console.WriteLine("*** Get marks ***");
+            mark.Getmarks();
+            Console.WriteLine(" ");
+            mark. DisplayData();
             Console.ReadKey();
         }
     }

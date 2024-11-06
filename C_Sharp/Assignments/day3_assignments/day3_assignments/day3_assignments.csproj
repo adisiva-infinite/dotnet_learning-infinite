@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Accounts.cs" />
     <Compile Include="CheckEquality.cs" />
+    <Compile Include="SalesDetails.cs" />
     <Compile Include="StringReverse.cs" />
     <Compile Include="Strings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

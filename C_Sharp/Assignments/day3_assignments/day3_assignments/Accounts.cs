@@ -19,6 +19,7 @@ namespace day3_assignments
             public int Balance = 10000;
             public string Check;
 
+        // Pass the other information like Acount no, customer name, acc type through constructor
         public Accounts(string customer_name, int account_no, string account_type)
         {
             Customer_name = customer_name;
@@ -40,8 +41,12 @@ namespace day3_assignments
             }
         public void Type_of_Transaction()
         {
+                // credit by passing the amount to be deposited and update the balance
+                // -If transaction type is deposit call the function
+
             switch (Transaction_type)
             {
+
                 case "Deposit":
                 case "deposit":
                     Console.Write("Amount : ");
