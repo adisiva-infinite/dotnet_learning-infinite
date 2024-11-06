@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Assignment_3
 {
+
+    // Create a class called Saledetails
+    // which has data members like Salesno,  Productno,  Price, dateofsale, Qty, TotalAmount
+
     class SalesDetails
     {
         public static int Sales_No;
@@ -13,7 +17,11 @@ namespace Assignment_3
         public static int Price;
         public static DateTime DateofSale;
         public static int Quantity;
-        public static int Total_Amount;
+        public static int TotalAmount;
+
+        // Pass the other information like
+        // SalesNo, Productno, Price,Qty and Dateof sale through constructor
+
         public SalesDetails(int sales_no, int product_no, int price, int qty, DateTime date_of_sale)
         {
             Sales_No = sales_no;
@@ -23,9 +31,13 @@ namespace Assignment_3
             DateofSale = date_of_sale;
 
         }
+
+        // Create a method called Sales()
+        // that takes qty, Price details of the object and updates the TotalAmount as  Qty *Price
+
         public void Sales(int price, int qty)
         {
-            Total_Amount = qty * price;
+            TotalAmount = qty * price;
         }
     }
     class SalesDetails1 : SalesDetails
@@ -35,31 +47,33 @@ namespace Assignment_3
         {
 
         }
+
+        // call the show data method to display the values without an object.
         public static void Show_Data()
         {
             Console.WriteLine(" ");
-            Console.WriteLine("*** Total Deta ***");
+            Console.WriteLine("*** Total Bill ***");
             Console.WriteLine("Sales No: {0}", Sales_No);
             Console.WriteLine("Product No: {0}", Product_No);
             Console.WriteLine("Price : {0}", Price);
             Console.WriteLine("Quantity : {0}", Quantity);
             Console.WriteLine("Date of sale : {0}", DateofSale);
-            Console.WriteLine("Total Amount : {0}", Total_Amount);
+            Console.WriteLine("Total Amount : {0}", TotalAmount);
         }
         public static void Main()
         {
             Console.Write("Enter the Sales Number:");
-            int saleno = Convert.ToInt32(Console.ReadLine());
+            int sale_no = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter the Product Number:");
-            int prod_no = Convert.ToInt32(Console.ReadLine());
+            int product_no = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter the Price:");
-            int pri = Convert.ToInt32(Console.ReadLine());
+            int price = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter the Quantity:");
             int quantity = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter the Date of sale:");
-            DateTime dos = Convert.ToDateTime(Console.ReadLine());
-            SalesDetails s = new SalesDetails(saleno, prod_no, pri, quantity, dos);
-            s.Sales(pri, quantity);
+            DateTime dateofsale = Convert.ToDateTime(Console.ReadLine());
+            SalesDetails Sdetails = new SalesDetails(sale_no, product_no, price, quantity, dateofsale);
+            Sdetails.Sales(price, quantity);
             Show_Data();
             Console.Read();
         }

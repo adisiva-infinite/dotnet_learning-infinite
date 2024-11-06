@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>day3_assignments.Inheritance</StartupObject>
+    <StartupObject>Assignment_3.SalesDetails1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
