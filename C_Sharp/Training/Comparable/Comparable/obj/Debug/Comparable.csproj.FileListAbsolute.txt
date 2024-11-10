@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Comparable\Comparable\bin\Debug\Comparable.exe.config
+C:\Infinite_Training\C_Sharp\Training\Comparable\Comparable\bin\Debug\Comparable.exe
+C:\Infinite_Training\C_Sharp\Training\Comparable\Comparable\bin\Debug\Comparable.pdb
+C:\Infinite_Training\C_Sharp\Training\Comparable\Comparable\obj\Debug\Comparable.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Comparable\Comparable\obj\Debug\Comparable.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Comparable\Comparable\obj\Debug\Comparable.exe
+C:\Infinite_Training\C_Sharp\Training\Comparable\Comparable\obj\Debug\Comparable.pdb

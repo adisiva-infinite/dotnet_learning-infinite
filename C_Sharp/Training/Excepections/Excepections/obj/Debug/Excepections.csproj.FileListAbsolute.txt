@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Excepections\Excepections\bin\Debug\Excepections.exe.config
+C:\Infinite_Training\C_Sharp\Training\Excepections\Excepections\bin\Debug\Excepections.exe
+C:\Infinite_Training\C_Sharp\Training\Excepections\Excepections\bin\Debug\Excepections.pdb
+C:\Infinite_Training\C_Sharp\Training\Excepections\Excepections\obj\Debug\Excepections.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Excepections\Excepections\obj\Debug\Excepections.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Excepections\Excepections\obj\Debug\Excepections.exe
+C:\Infinite_Training\C_Sharp\Training\Excepections\Excepections\obj\Debug\Excepections.pdb
