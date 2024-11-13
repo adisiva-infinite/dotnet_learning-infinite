@@ -11,68 +11,59 @@ namespace Assesment_2
     // which takes grade as an input and checks whether student passed the course or not
     abstract class Student
     {
-        public abstract void Ispassed(char grade);
-        public void fail()
+        public string Name;
+        public int StudentId;
+        public double Grade;
+        public abstract bool IsPassed(double Grade);
+    }
+
+    // Create 2 Sub classes Undergraduate and Graduate
+    // that inherits all members of the student and overrides Ispassed(grade) method
+
+    class Undergraduate : Student
+    {
+        public override bool IsPassed(double Grade)
         {
-            Console.WriteLine("Student was failed");
+            if (Grade >= 70.0) return true;
+            else return false;
         }
     }
-    class Details : Student
+    class Graduate : Student
     {
-
-        public char Grade = 'f';
-
-        void Student_details(string name, int id)
+        public override bool IsPassed(double Grade)
         {
-            Console.WriteLine("");
-            Console.WriteLine("*** Result of the student ***");
-            Console.WriteLine($"student name : {name}");
-            Console.WriteLine($"student id : {id}");
-
+            if (Grade >= 80.0) return true;
+            else return false;
         }
 
-        public override void Ispassed(char grade)
-        {
-       
-            switch(grade)
-            {
-                case 'o':
-                    Console.WriteLine("Student is Pass");
-                    break;
-                case 'a':
-                    Console.WriteLine("Student is Pass");
-                    break;
-                case 'b':
-                    Console.WriteLine("Student is Pass");
-                    break;
-                case 'c':
-                    Console.WriteLine("Student is Pass");
-                    break;
-                case 'd':
-                    Console.WriteLine("Student is Pass");
-                    break;
-                case 'f':
-                    fail();
-                    break;
-                default:
-                    Console.WriteLine("ENter valid input");
-                    break;
 
 
-            }
-        }
         static void Main()
         {
+            Console.Write("Enter type of student(Undergraduate or graduate) : ");
+            string type = Console.ReadLine();
             Console.Write("Enter student name : ");
             string Student_name = Console.ReadLine();
             Console.Write("Enter student id : ");
             int Student_id = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter student grade : ");
-            char grade = Convert.ToChar(Console.ReadLine());
-            Details d1 = new Details();
-            d1.Student_details(Student_name, Student_id);
-            d1.Ispassed(grade);
+            double grade = Convert.ToDouble(Console.ReadLine());
+
+            Student s1;
+            if (type == "undergraduate") s1 = new Undergraduate();
+            else s1 = new Graduate();
+
+            s1.Name = Student_name;
+            s1.StudentId = Student_id;
+            s1.Grade = grade;
+            Console.WriteLine(" ");
+            Console.WriteLine("*** Student Details ***");
+            Console.WriteLine($"Name       : {Student_name}");
+            Console.WriteLine($"student id : {Student_id}");
+            Console.WriteLine($"Grade      : {grade}");
+            Console.WriteLine($"Student is pass or fail  : {s1.IsPassed(grade)}");
             Console.ReadKey();
         }
     }
 }
+

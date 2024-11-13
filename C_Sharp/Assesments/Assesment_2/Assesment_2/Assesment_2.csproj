@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Assesment_2.Handle_Exception</StartupObject>
+    <StartupObject>Assesment_2.Graduate</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
