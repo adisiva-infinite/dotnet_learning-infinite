@@ -1,0 +1,2 @@
+C:\Infinite_Training\C_Sharp\Training\File\File\obj\Debug\File.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\File\File\obj\Debug\File.csproj.CoreCompileInputs.cache

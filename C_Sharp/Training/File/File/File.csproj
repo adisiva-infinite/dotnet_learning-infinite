@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F1C04B15-7839-444E-B27A-CB23044A267F}</ProjectGuid>
+    <ProjectGuid>{C33EF73C-C978-4523-BAC0-C912DC7DAE65}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Assesment_1</RootNamespace>
-    <AssemblyName>Assesment_1</AssemblyName>
+    <RootNamespace>File</RootNamespace>
+    <AssemblyName>File</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Assesment_1.String_Newstring</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,10 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Count.cs" />
-    <Compile Include="Largest_num.cs" />
-    <Compile Include="String_Newstring.cs" />
-    <Compile Include="String_position.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
