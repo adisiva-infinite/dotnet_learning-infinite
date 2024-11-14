@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Assignment_5.Count</StartupObject>
+    <StartupObject>Assignment_5.BookShelf</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

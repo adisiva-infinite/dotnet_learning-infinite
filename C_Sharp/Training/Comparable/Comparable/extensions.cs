@@ -33,7 +33,7 @@ namespace Comparable
             
             // here we have to every element is divisible by 3 or not
 
-            var divide = numbers.Where(x => x % 3 == 0);
+            var divide = numbers.FindAll(x => x % 3 == 0);
             foreach(int x in divide)
             {
                 Console.Write("{0} ", x);
