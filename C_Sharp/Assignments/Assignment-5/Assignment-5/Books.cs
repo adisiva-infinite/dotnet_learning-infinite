@@ -33,14 +33,14 @@ namespace Assignment_5
             get { return Book_list[i]; }
             set { Book_list[i] = value; }
         }
-
-        // Using the indexer method assign values to the books and display the same.
         static void Main(string[] args)
         {
             Console.WriteLine("*** Enter the Books details***");
             Console.WriteLine();
             string Book_name;
             string Author_name;
+
+        // Using the indexer method assign values to the books and display the same.
             BookShelf bs = new BookShelf();
             for (int i = 0; i < 5; i++)
             {

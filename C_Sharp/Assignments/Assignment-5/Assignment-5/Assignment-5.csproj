@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Assignment_5.strings</StartupObject>
+    <StartupObject>Assignment_5.Count</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Books.cs" />
+    <Compile Include="Count.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="strings.cs" />
   </ItemGroup>
