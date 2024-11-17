@@ -1,0 +1,6 @@
+C:\Infinite_Training\C_Sharp\Assignments\Assignment-6\Assignment-6\Assignment-6_ClassLibrary-\Assignment-6_ClassLibrary-\bin\Debug\Assignment-6_ClassLibrary-.exe
+C:\Infinite_Training\C_Sharp\Assignments\Assignment-6\Assignment-6\Assignment-6_ClassLibrary-\Assignment-6_ClassLibrary-\bin\Debug\Assignment-6_ClassLibrary-.pdb
+C:\Infinite_Training\C_Sharp\Assignments\Assignment-6\Assignment-6\Assignment-6_ClassLibrary-\Assignment-6_ClassLibrary-\obj\Debug\Assignment-6_ClassLibrary-.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Assignments\Assignment-6\Assignment-6\Assignment-6_ClassLibrary-\Assignment-6_ClassLibrary-\obj\Debug\Assignment-6_ClassLibrary-.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Assignments\Assignment-6\Assignment-6\Assignment-6_ClassLibrary-\Assignment-6_ClassLibrary-\obj\Debug\Assignment-6_ClassLibrary-.exe
+C:\Infinite_Training\C_Sharp\Assignments\Assignment-6\Assignment-6\Assignment-6_ClassLibrary-\Assignment-6_ClassLibrary-\obj\Debug\Assignment-6_ClassLibrary-.pdb
