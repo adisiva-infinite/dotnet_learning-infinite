@@ -16,9 +16,9 @@ namespace Assignment_6_ClassLibrary_
             {
                 float concession = totalfare * 0.30f;
                 float finalfare = totalfare - concession;
-                Console.WriteLine("Senior citizen" + finalfare);
+                Console.WriteLine("Senior citizen " + finalfare);
             }
-            else Console.WriteLine("Ticket Booked" + totalfare);
+            else Console.WriteLine("Ticket Booked " + totalfare);
         }
     }
 }

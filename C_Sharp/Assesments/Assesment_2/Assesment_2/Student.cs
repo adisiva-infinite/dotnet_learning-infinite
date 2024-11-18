@@ -37,7 +37,7 @@ namespace Assesment_2
         }
 
 
-
+            
         static void Main()
         {
             Console.Write("Enter type of student(Undergraduate or graduate) : ");
@@ -61,7 +61,9 @@ namespace Assesment_2
             Console.WriteLine($"Name       : {Student_name}");
             Console.WriteLine($"student id : {Student_id}");
             Console.WriteLine($"Grade      : {grade}");
-            Console.WriteLine($"Student is pass or fail  : {s1.IsPassed(grade)}");
+            var x = (s1.IsPassed(grade) == true) ? "Pass" : "Fail";
+            Console.WriteLine($"Student is : {x}");
+
             Console.ReadKey();
         }
     }
