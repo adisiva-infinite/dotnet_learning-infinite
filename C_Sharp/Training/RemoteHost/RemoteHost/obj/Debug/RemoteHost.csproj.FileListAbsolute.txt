@@ -1,0 +1,10 @@
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\bin\Debug\RemoteHost.exe.config
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\bin\Debug\RemoteHost.exe
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\bin\Debug\RemoteHost.pdb
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\bin\Debug\RemotingServices.dll
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\bin\Debug\RemotingServices.pdb
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\obj\Debug\RemoteHost.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\obj\Debug\RemoteHost.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\obj\Debug\RemoteHost.csproj.CopyComplete
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\obj\Debug\RemoteHost.exe
+C:\Infinite_Training\C_Sharp\Training\RemoteHost\RemoteHost\obj\Debug\RemoteHost.pdb

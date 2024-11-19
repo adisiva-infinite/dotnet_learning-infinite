@@ -1,0 +1,6 @@
+C:\Infinite_Training\C_Sharp\Training\RemotingServices\RemotingServices\bin\Debug\RemotingServices.dll
+C:\Infinite_Training\C_Sharp\Training\RemotingServices\RemotingServices\bin\Debug\RemotingServices.pdb
+C:\Infinite_Training\C_Sharp\Training\RemotingServices\RemotingServices\obj\Debug\RemotingServices.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\RemotingServices\RemotingServices\obj\Debug\RemotingServices.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\RemotingServices\RemotingServices\obj\Debug\RemotingServices.dll
+C:\Infinite_Training\C_Sharp\Training\RemotingServices\RemotingServices\obj\Debug\RemotingServices.pdb

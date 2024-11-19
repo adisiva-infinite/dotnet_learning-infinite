@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Tuples\Tuples\bin\Debug\Tuples.exe.config
+C:\Infinite_Training\C_Sharp\Training\Tuples\Tuples\bin\Debug\Tuples.exe
+C:\Infinite_Training\C_Sharp\Training\Tuples\Tuples\bin\Debug\Tuples.pdb
+C:\Infinite_Training\C_Sharp\Training\Tuples\Tuples\obj\Debug\Tuples.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Tuples\Tuples\obj\Debug\Tuples.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Tuples\Tuples\obj\Debug\Tuples.exe
+C:\Infinite_Training\C_Sharp\Training\Tuples\Tuples\obj\Debug\Tuples.pdb

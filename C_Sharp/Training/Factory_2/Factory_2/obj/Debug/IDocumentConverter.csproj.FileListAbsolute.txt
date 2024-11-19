@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Factory_2\Factory_2\bin\Debug\Factory_2.exe.config
+C:\Infinite_Training\C_Sharp\Training\Factory_2\Factory_2\bin\Debug\Factory_2.exe
+C:\Infinite_Training\C_Sharp\Training\Factory_2\Factory_2\bin\Debug\Factory_2.pdb
+C:\Infinite_Training\C_Sharp\Training\Factory_2\Factory_2\obj\Debug\IDocumentConverter.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Factory_2\Factory_2\obj\Debug\IDocumentConverter.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Factory_2\Factory_2\obj\Debug\Factory_2.exe
+C:\Infinite_Training\C_Sharp\Training\Factory_2\Factory_2\obj\Debug\Factory_2.pdb

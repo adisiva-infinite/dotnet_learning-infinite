@@ -1,0 +1,10 @@
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\bin\Debug\RemoteClient.exe.config
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\bin\Debug\RemoteClient.exe
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\bin\Debug\RemoteClient.pdb
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\bin\Debug\RemotingServices.dll
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\bin\Debug\RemotingServices.pdb
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\obj\Debug\RemoteClient.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\obj\Debug\RemoteClient.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\obj\Debug\RemoteClient.csproj.CopyComplete
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\obj\Debug\RemoteClient.exe
+C:\Infinite_Training\C_Sharp\Training\RemoteClient\RemoteClient\obj\Debug\RemoteClient.pdb

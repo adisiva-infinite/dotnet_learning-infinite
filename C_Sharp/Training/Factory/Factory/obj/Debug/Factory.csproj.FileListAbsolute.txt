@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Factory\Factory\obj\Debug\Factory.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Factory\Factory\obj\Debug\Factory.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Factory\Factory\bin\Debug\Factory.exe.config
+C:\Infinite_Training\C_Sharp\Training\Factory\Factory\bin\Debug\Factory.exe
+C:\Infinite_Training\C_Sharp\Training\Factory\Factory\bin\Debug\Factory.pdb
+C:\Infinite_Training\C_Sharp\Training\Factory\Factory\obj\Debug\Factory.exe
+C:\Infinite_Training\C_Sharp\Training\Factory\Factory\obj\Debug\Factory.pdb
