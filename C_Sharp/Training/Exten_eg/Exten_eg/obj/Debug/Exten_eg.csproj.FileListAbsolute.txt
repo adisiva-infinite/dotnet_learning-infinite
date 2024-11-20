@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Exten_eg\Exten_eg\obj\Debug\Exten_eg.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Exten_eg\Exten_eg\obj\Debug\Exten_eg.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Exten_eg\Exten_eg\bin\Debug\Exten_eg.exe.config
+C:\Infinite_Training\C_Sharp\Training\Exten_eg\Exten_eg\bin\Debug\Exten_eg.exe
+C:\Infinite_Training\C_Sharp\Training\Exten_eg\Exten_eg\bin\Debug\Exten_eg.pdb
+C:\Infinite_Training\C_Sharp\Training\Exten_eg\Exten_eg\obj\Debug\Exten_eg.exe
+C:\Infinite_Training\C_Sharp\Training\Exten_eg\Exten_eg\obj\Debug\Exten_eg.pdb

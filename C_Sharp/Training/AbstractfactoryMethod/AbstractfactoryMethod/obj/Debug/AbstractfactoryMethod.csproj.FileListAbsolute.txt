@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\AbstractfactoryMethod\AbstractfactoryMethod\bin\Debug\AbstractfactoryMethod.exe.config
+C:\Infinite_Training\C_Sharp\Training\AbstractfactoryMethod\AbstractfactoryMethod\bin\Debug\AbstractfactoryMethod.exe
+C:\Infinite_Training\C_Sharp\Training\AbstractfactoryMethod\AbstractfactoryMethod\bin\Debug\AbstractfactoryMethod.pdb
+C:\Infinite_Training\C_Sharp\Training\AbstractfactoryMethod\AbstractfactoryMethod\obj\Debug\AbstractfactoryMethod.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\AbstractfactoryMethod\AbstractfactoryMethod\obj\Debug\AbstractfactoryMethod.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\AbstractfactoryMethod\AbstractfactoryMethod\obj\Debug\AbstractfactoryMethod.exe
+C:\Infinite_Training\C_Sharp\Training\AbstractfactoryMethod\AbstractfactoryMethod\obj\Debug\AbstractfactoryMethod.pdb

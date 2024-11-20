@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IDocumentConverter.Factories
 {
-    public interface Text_gateway
+    public interface IText_gateway
     {
         void Textformat(string name);
     }

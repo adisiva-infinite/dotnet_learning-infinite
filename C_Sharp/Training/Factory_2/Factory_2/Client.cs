@@ -16,7 +16,7 @@ namespace IDocumentConverter
             string x = Console.ReadLine();
             try
             {
-                Text_gateway pg = Text_gateway_factory.CreateText_gateway(format_name);
+                IText_gateway pg = Text_gateway_factory.CreateText_gateway(format_name);
                 pg.Textformat(x);
             }
             catch (ArgumentException ae)

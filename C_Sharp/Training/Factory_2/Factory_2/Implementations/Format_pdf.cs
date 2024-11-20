@@ -7,7 +7,7 @@ using IDocumentConverter.Factories;
 
 namespace IDocumentConverter.Implementations
 {
-    public class Format_pdf : Text_gateway
+    public class Format_pdf : IText_gateway
     {
         public void Textformat(string name)
         {

@@ -1,0 +1,13 @@
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\bin\Debug\DLL_file.exe.config
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\bin\Debug\DLL_file.exe
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\bin\Debug\DLL_file.pdb
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\bin\Debug\ClassLibrary2.dll
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\bin\Debug\ClassLibrary2.pdb
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\obj\Debug\DLL_file.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\obj\Debug\DLL_file.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\obj\Debug\DLL_file.csproj.CopyComplete
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\obj\Debug\DLL_file.exe
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\obj\Debug\DLL_file.pdb
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\bin\Debug\Day1_Csharp.exe
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\bin\Debug\Day1_Csharp.pdb
+C:\Infinite_Training\C_Sharp\Training\DLL_file\DLL_file\bin\Debug\Day1_Csharp.exe.config

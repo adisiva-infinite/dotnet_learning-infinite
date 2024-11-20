@@ -10,7 +10,7 @@ namespace IDocumentConverter.Factories
 {
     public static class Text_gateway_factory
     {
-        public static Text_gateway CreateText_gateway(string name)
+        public static IText_gateway CreateText_gateway(string name)
         {
             switch (name.ToLower())
             {

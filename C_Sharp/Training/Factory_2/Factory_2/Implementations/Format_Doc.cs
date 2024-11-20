@@ -7,7 +7,7 @@ using IDocumentConverter.Factories;
 
 namespace IDocumentConverter.Implementations
 {
-    public class Format_Doc : Text_gateway
+    public class Format_Doc : IText_gateway
     {
         public void Textformat(string name)
         {
