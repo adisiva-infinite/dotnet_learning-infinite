@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\GenericDelegates\GenericDelegates\bin\Debug\GenericDelegates.exe.config
+C:\Infinite_Training\C_Sharp\Training\GenericDelegates\GenericDelegates\bin\Debug\GenericDelegates.exe
+C:\Infinite_Training\C_Sharp\Training\GenericDelegates\GenericDelegates\bin\Debug\GenericDelegates.pdb
+C:\Infinite_Training\C_Sharp\Training\GenericDelegates\GenericDelegates\obj\Debug\GenericDelegates.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\GenericDelegates\GenericDelegates\obj\Debug\GenericDelegates.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\GenericDelegates\GenericDelegates\obj\Debug\GenericDelegates.exe
+C:\Infinite_Training\C_Sharp\Training\GenericDelegates\GenericDelegates\obj\Debug\GenericDelegates.pdb

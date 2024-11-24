@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Lamba_expressions_eg\Lamba_expressions_eg\bin\Debug\Lamba_expressions_eg.exe.config
+C:\Infinite_Training\C_Sharp\Training\Lamba_expressions_eg\Lamba_expressions_eg\bin\Debug\Lamba_expressions_eg.exe
+C:\Infinite_Training\C_Sharp\Training\Lamba_expressions_eg\Lamba_expressions_eg\bin\Debug\Lamba_expressions_eg.pdb
+C:\Infinite_Training\C_Sharp\Training\Lamba_expressions_eg\Lamba_expressions_eg\obj\Debug\Lamba_expressions_eg.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Lamba_expressions_eg\Lamba_expressions_eg\obj\Debug\Lamba_expressions_eg.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Lamba_expressions_eg\Lamba_expressions_eg\obj\Debug\Lamba_expressions_eg.exe
+C:\Infinite_Training\C_Sharp\Training\Lamba_expressions_eg\Lamba_expressions_eg\obj\Debug\Lamba_expressions_eg.pdb

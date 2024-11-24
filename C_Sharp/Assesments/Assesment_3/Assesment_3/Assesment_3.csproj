@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Assesment_3.Program</StartupObject>
+    <StartupObject>Assesment_3.Delegates_Problem</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

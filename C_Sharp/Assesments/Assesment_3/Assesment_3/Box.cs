@@ -30,7 +30,6 @@ namespace program1
     class Test
     {
         public static void Main(string[] args)
-
         {
             // Creating object for class
             Box box1 = new Box();

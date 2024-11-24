@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\Delegates_example\Delegates_example\bin\Debug\Delegates_example.exe.config
+C:\Infinite_Training\C_Sharp\Training\Delegates_example\Delegates_example\bin\Debug\Delegates_example.exe
+C:\Infinite_Training\C_Sharp\Training\Delegates_example\Delegates_example\bin\Debug\Delegates_example.pdb
+C:\Infinite_Training\C_Sharp\Training\Delegates_example\Delegates_example\obj\Debug\Delegates_example.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\Delegates_example\Delegates_example\obj\Debug\Delegates_example.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\Delegates_example\Delegates_example\obj\Debug\Delegates_example.exe
+C:\Infinite_Training\C_Sharp\Training\Delegates_example\Delegates_example\obj\Debug\Delegates_example.pdb

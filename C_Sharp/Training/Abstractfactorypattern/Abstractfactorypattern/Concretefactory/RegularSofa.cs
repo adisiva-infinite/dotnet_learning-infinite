@@ -11,7 +11,7 @@ namespace Abstractfactorypattern.Concretefactory
     {
         public void LayOn()
         {
-            Console.WriteLine("Details of Regular Sofa...");
+            Console.WriteLine("Layon Regular Sofa...");
         }
     }
 }

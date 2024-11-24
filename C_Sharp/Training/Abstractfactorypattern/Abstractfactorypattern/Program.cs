@@ -12,37 +12,27 @@ namespace Abstractfactorypattern
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("----------Regular Products--------");
-
-            //Console.WriteLine("Enter Product type (Regular / Recliner) : ");
-            //string a = Console.ReadLine();
-
-            //Console.WriteLine("Enter Product type (Chair / Sofa) : ");
-            //string b = Console.ReadLine();
-
-
             FurnitureFactory Ffactory = new RegularProducts();
+            Console.WriteLine("Enter Product type (Regular / Recliner) : ");
+            string a = Console.ReadLine();
 
-            IChair chair = Ffactory.CreateChair();
-            chair.Sit();
+            if (a.Equals("Regular")) Ffactory = new RegularProducts();
+            else if (a.Equals("Recliner")) Ffactory = new ReclinerProducts();
 
-            ISofa sofa = Ffactory.CreateSofa();
-            sofa.LayOn();
+            Console.WriteLine("Enter Product type (Chair / Sofa) : ");
+            string b = Console.ReadLine();
 
-            Console.WriteLine("------Rec Products-------");
-
-            FurnitureFactory recfactory = new ReclinerProducts();
-
-            ISofa sofa1 = recfactory.CreateSofa();
-            sofa1.LayOn();
-
-            IChair c1 = recfactory.CreateChair();
-            c1.Sit();
-
+            if(b.Equals("Chair"))
+            {
+                IChair chair = Ffactory.CreateChair();
+                chair.Sit();
+            }
+            else if(b.Equals("Sofa"))
+            {
+                ISofa sofa = Ffactory.CreateSofa();
+                sofa.LayOn();
+            }
             Console.ReadLine();
-
-
-
         }
     }
 }
