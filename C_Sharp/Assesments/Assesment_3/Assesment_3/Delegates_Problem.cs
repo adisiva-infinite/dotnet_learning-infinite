@@ -34,14 +34,14 @@ namespace Assesment_3
             Console.Write("Enter value of B : ");
             int B = Convert.ToInt32(Console.ReadLine());
 
-            Delegates_Problem.Calculate Add = new Delegates_Problem.Calculate(Delegates_Problem.Sum);
+            Calculate Add = new Calculate(Sum);
             Delegates_Problem.Calculate Sub = new Delegates_Problem.Calculate(Delegates_Problem.Subtract);
             Delegates_Problem.Calculate Multiplication = new Delegates_Problem.Calculate(Delegates_Problem.Multiply);
 
             Console.WriteLine();
             Console.WriteLine("*** Result of Two Values ***");
             Console.Write("Sum of two values : ");
-            Delegates_Problem.Perform(Add, A, B);
+            Perform(Add, A, B);
             Console.Write("Sub of two values : ");
             Delegates_Problem.Perform(Sub, A, B);
             Console.Write("Multiplication of two value is : ");
