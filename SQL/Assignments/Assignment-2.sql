@@ -121,3 +121,10 @@ select Ename,Salary from Emp where Salary>=1500 and Salary<=2850
 -- Find all managers who have more than 2 employees reporting to them
 
 select Mgr_id,count(*) as Employee_Count from Emp group by Mgr_id having count(*)>2
+
+
+create or alter proc sp_update (@Emp_id int)
+as
+begin
+  select Emp_id,Ename,Salary,Salary+100 as Increment_Salary from Emp where Salary<1250 and Emp_id=@Emp_id
+end

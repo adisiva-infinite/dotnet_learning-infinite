@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Assesments\Assesment-4\Assesment-4\bin\Debug\Assesment-4.exe.config
+C:\Infinite_Training\C_Sharp\Assesments\Assesment-4\Assesment-4\bin\Debug\Assesment-4.exe
+C:\Infinite_Training\C_Sharp\Assesments\Assesment-4\Assesment-4\bin\Debug\Assesment-4.pdb
+C:\Infinite_Training\C_Sharp\Assesments\Assesment-4\Assesment-4\obj\Debug\Assesment-4.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Assesments\Assesment-4\Assesment-4\obj\Debug\Assesment-4.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Assesments\Assesment-4\Assesment-4\obj\Debug\Assesment-4.exe
+C:\Infinite_Training\C_Sharp\Assesments\Assesment-4\Assesment-4\obj\Debug\Assesment-4.pdb
