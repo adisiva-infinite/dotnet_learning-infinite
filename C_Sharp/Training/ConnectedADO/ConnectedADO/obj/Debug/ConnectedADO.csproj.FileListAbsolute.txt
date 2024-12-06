@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\ConnectedADO\ConnectedADO\bin\Debug\ConnectedADO.exe.config
+C:\Infinite_Training\C_Sharp\Training\ConnectedADO\ConnectedADO\bin\Debug\ConnectedADO.exe
+C:\Infinite_Training\C_Sharp\Training\ConnectedADO\ConnectedADO\bin\Debug\ConnectedADO.pdb
+C:\Infinite_Training\C_Sharp\Training\ConnectedADO\ConnectedADO\obj\Debug\ConnectedADO.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\ConnectedADO\ConnectedADO\obj\Debug\ConnectedADO.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\ConnectedADO\ConnectedADO\obj\Debug\ConnectedADO.exe
+C:\Infinite_Training\C_Sharp\Training\ConnectedADO\ConnectedADO\obj\Debug\ConnectedADO.pdb
