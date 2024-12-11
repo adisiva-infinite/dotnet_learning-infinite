@@ -60,7 +60,8 @@ begin
 end;
 
 select dbo.Calculate_Bonus(30, 1000.00) as Bonus
-select Emp_id, Ename,dbo.Calculate_Bonus(Dept_no,Salary) as Bonus from Emp
+select Emp_id, Ename,Dept_no,Salary,dbo.Calculate_Bonus(Dept_no,Salary) 
+as Bonus,dbo.Calculate_Bonus(Dept_no,Salary)+Salary as 'Updated Salary with bonus' from Emp
 
 
 -- Create a procedure to update the salary of employee by 500 

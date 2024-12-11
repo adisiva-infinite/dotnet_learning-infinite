@@ -1,0 +1,7 @@
+C:\Infinite_Training\C_Sharp\Training\CrudOperations\CrudOperations\bin\Debug\CrudOperations.exe.config
+C:\Infinite_Training\C_Sharp\Training\CrudOperations\CrudOperations\bin\Debug\CrudOperations.exe
+C:\Infinite_Training\C_Sharp\Training\CrudOperations\CrudOperations\bin\Debug\CrudOperations.pdb
+C:\Infinite_Training\C_Sharp\Training\CrudOperations\CrudOperations\obj\Debug\CrudOperations.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\CrudOperations\CrudOperations\obj\Debug\CrudOperations.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\CrudOperations\CrudOperations\obj\Debug\CrudOperations.exe
+C:\Infinite_Training\C_Sharp\Training\CrudOperations\CrudOperations\obj\Debug\CrudOperations.pdb

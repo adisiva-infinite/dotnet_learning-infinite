@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConnectedADO.Ado2</StartupObject>
+    <StartupObject>ConnectedADO.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

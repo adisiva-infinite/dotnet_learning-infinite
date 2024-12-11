@@ -15,10 +15,10 @@ namespace ConnectedADO
         public static IDataReader dr;
         static void Main()
         {
-            InsertData();
-            UpdateData();
-            DeleteData();
+            //InsertData();
+            //DeleteData();
             SelectData();
+            UpdateData();
             Console.Read();
         }
 
@@ -31,16 +31,17 @@ namespace ConnectedADO
         }
         static void SelectData()
         {
-            con = getConnection();
+             getConnection();
             cmd = new SqlCommand("select * from Emp");
             cmd.Connection = con;
             dr = cmd.ExecuteReader();
-
+            Console.WriteLine("Data is Retriving");
             while (dr.Read())
             {
                 Console.WriteLine(dr[0] + " " + dr[1] + " " + dr[2] + " " + dr[3] + " " + dr[4]+" " + dr[5] + " " + dr[6] + " " + dr[7]);
 
                 //Console.WriteLine("Employee ID :" + dr[0]);
+
                 //Console.WriteLine("Employee Name :" + dr[1]);
                 //Console.WriteLine("Employee Salary :" + dr[3]);
             }
@@ -118,7 +119,7 @@ namespace ConnectedADO
 
             Console.WriteLine("Enter the Empid:");
             int id = Convert.ToInt32(Console.ReadLine());
-            cmd = new SqlCommand("update Emp set Ename = 'Divya' where Emp_id = @empid", con);
+            cmd = new SqlCommand("update Emp set Ename = 'Adi Siva' where Emp_id = @empid", con);
             cmd.Parameters.AddWithValue("@empid", id);
             int res = cmd.ExecuteNonQuery();  
             if (res > 0) Console.WriteLine("Updated successfully:");
