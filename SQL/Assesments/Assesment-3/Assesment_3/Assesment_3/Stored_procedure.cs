@@ -37,7 +37,7 @@ namespace Assesment_3
                 Console.WriteLine("Connected to database...");
 
                 // Create a command object for the stored procedure
-                cmd = new SqlCommand("sp_insert", conn);
+                cmd = new SqlCommand("sp_productdetails", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 // Getting user input for the parameters
