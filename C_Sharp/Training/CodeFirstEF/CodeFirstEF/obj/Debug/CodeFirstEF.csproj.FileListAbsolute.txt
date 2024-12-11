@@ -1,0 +1,14 @@
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\bin\Debug\CodeFirstEF.exe.config
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\bin\Debug\CodeFirstEF.exe
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\bin\Debug\CodeFirstEF.pdb
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\bin\Debug\EntityFramework.dll
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\bin\Debug\EntityFramework.xml
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.csproj.AssemblyReference.cache
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.csproj.CopyComplete
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.exe
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.pdb
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.Migrations.MigrationBook.resources
+C:\Infinite_Training\C_Sharp\Training\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.csproj.GenerateResource.cache
