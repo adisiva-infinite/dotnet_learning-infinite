@@ -49,5 +49,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="3Queshtml.html" />
+    <Content Include="HTMLPage1.html" />
+    <Content Include="Javascript_Questions.html" />
+    <Content Include="js2Ques.html" />
+    <Content Include="Js3Ques.html" />
+    <Content Include="Sec_Ques_Html.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
