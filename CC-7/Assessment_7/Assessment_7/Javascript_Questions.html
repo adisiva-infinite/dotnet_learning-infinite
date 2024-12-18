@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript Code Challenge 7</title>
+</head>
+<body>
+    <!--⦁	Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
+    -->
+    <div style="border:2px solid black; padding:20px">
+    <h2>Sample form : </h2>
+    <label>1st Number : </label>
+    <input type="number" id="n1" />
+    <br /><br />
+    <label>2st Number : </label>
+    <input type="number" id="n2" />
+    <br />
+    <br />
+
+    <button onclick="Multiplication()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    <br />
+    <br />
+
+    <p> The Result is : </p>
+    <span id="res"></span>
+    </div>
+    <hr />
+    <script>
+
+        function Multiplication() {
+            var first_num = document.getElementById('n1').value;
+            var second_num = document.getElementById('n2').value;
+
+            var x = first_num * second_num;
+            document.getElementById('res').innerHTML = "Multiplied by " + first_num + " and " + second_num + " = " + x;
+        }
+
+        function divide() {
+            var first_num = document.getElementById('n1').value;
+            var second_num = document.getElementById('n2').value;
+
+            var x = first_num / second_num;
+            document.getElementById('res').innerHTML = "Divided by " + first_num + " and " + second_num + " = " + x;
+        }      
+
+    </script> 
+</body>
+</html>

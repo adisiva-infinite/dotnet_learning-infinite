@@ -1,0 +1,7 @@
+C:\Infinite_Training\Web Technologies\Training\Javascript\Js_jQuery\Js_jQuery\bin\Debug\Js_jQuery.exe.config
+C:\Infinite_Training\Web Technologies\Training\Javascript\Js_jQuery\Js_jQuery\bin\Debug\Js_jQuery.exe
+C:\Infinite_Training\Web Technologies\Training\Javascript\Js_jQuery\Js_jQuery\bin\Debug\Js_jQuery.pdb
+C:\Infinite_Training\Web Technologies\Training\Javascript\Js_jQuery\Js_jQuery\obj\Debug\Js_jQuery.csproj.AssemblyReference.cache
+C:\Infinite_Training\Web Technologies\Training\Javascript\Js_jQuery\Js_jQuery\obj\Debug\Js_jQuery.csproj.CoreCompileInputs.cache
+C:\Infinite_Training\Web Technologies\Training\Javascript\Js_jQuery\Js_jQuery\obj\Debug\Js_jQuery.exe
+C:\Infinite_Training\Web Technologies\Training\Javascript\Js_jQuery\Js_jQuery\obj\Debug\Js_jQuery.pdb
