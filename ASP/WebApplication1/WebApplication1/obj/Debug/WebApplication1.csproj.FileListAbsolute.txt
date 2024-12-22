@@ -1,2 +1,0 @@
-C:\Infinite_Training\ASP\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
-C:\Infinite_Training\ASP\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
