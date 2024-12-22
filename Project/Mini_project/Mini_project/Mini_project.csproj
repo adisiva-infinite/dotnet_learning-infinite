@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A522588-D2B8-42D6-ABEA-0AE01AFFE99F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Mini_project</RootNamespace>
+    <AssemblyName>Mini_project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract_factory\IAdmin.cs" />
+    <Compile Include="Abstract_factory\IUser.cs" />
+    <Compile Include="Admin_Interface\Add_Trains.cs" />
+    <Compile Include="Admin_Interface\Exit.cs" />
+    <Compile Include="Admin_Interface\User_Cancelled_Tickets.cs" />
+    <Compile Include="Admin_Interface\Delete_trains.cs" />
+    <Compile Include="Admin_Interface\Show_bookings.cs" />
+    <Compile Include="Admin_Interface\Modify_train.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="GatewaytoUser_Admin\AdminFactory.cs" />
+    <Compile Include="GatewaytoUser_Admin\ITrainFactory.cs" />
+    <Compile Include="GatewaytoUser_Admin\UserFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User_interface\Show_Trains.cs" />
+    <Compile Include="User_interface\Cancel_ticket.cs" />
+    <Compile Include="User_interface\Exit.cs" />
+    <Compile Include="User_interface\Ticket_booking.cs" />
+    <Compile Include="User_interface\Show_ticket.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
