@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Mini_project.Abstract_factory;
+using Mini_project.GatewaytoUser_Admin;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -82,6 +83,14 @@ namespace Mini_project.Admin_Interface
             catch(Exception Addtrain)
             {
                 Console.WriteLine($"Train status : {Addtrain.Message}");
+            }
+            finally
+            {
+                ITrainFactory Trainfactory;
+                Trainfactory = new AdminFactory();
+                IAdmin adminPerform = Trainfactory.CreateAdmin(); // Get the admin actions
+                adminPerform.Admin_Inputs();
+                conn.Close();
             }
         }
     }

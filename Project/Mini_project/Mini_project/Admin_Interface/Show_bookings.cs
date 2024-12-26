@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Mini_project.Abstract_factory;
+using Mini_project.GatewaytoUser_Admin;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -40,12 +41,13 @@ namespace Mini_project.Admin_Interface
                 Console.WriteLine();
                 Console.WriteLine($" Displaying {from} to {to} Booking details ");
                 Console.WriteLine();
-                Console.WriteLine("Train id  || PNR No  ||    Name    ||   Age   ||    Gender   ||   Class   ||   Berth   ||   Status");
+                Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+                Console.WriteLine(" Train id  |  PNR No  |      Name      |    Age    |    Gender   |   Class   |   Berth   |   Status");
                 while (dr.Read())
                 {
                     Console.WriteLine();
                     Console.WriteLine("---------------------------------------------------------------------------------------------------------------------");
-                    Console.WriteLine($" {dr[0]}    |   {dr[1]}   |      {dr[2]}      |     {dr[3]}    |    {dr[4]}    |    {dr[5]}     |    {dr[6]}    |     {dr[9]} ");
+                    Console.WriteLine($" {dr[0]}     |   {dr[1]}   |      {dr[2]}      |     {dr[3]}    |    {dr[4]}    |    {dr[5]}     |    {dr[6]}    |     {dr[9]} ");
                 }
                 Console.WriteLine();
             }
@@ -55,6 +57,10 @@ namespace Mini_project.Admin_Interface
             }
             finally
             {
+                ITrainFactory Trainfactory;
+                Trainfactory = new AdminFactory();
+                IAdmin adminPerform = Trainfactory.CreateAdmin(); // Get the admin actions
+                adminPerform.Admin_Inputs();
                 conn.Close();
             }
         }

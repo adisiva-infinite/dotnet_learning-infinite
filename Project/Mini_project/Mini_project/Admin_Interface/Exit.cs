@@ -11,8 +11,8 @@ namespace Mini_project.Admin_Interface
     {
         public void Admin_Inputs()
         {
+            Console.WriteLine("Admin Exited...");
             return;
-            new Client();
         }
     }
 }

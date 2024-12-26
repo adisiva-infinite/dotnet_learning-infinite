@@ -10,38 +10,38 @@ using System.Data.SqlClient;
 
 namespace Mini_project.User_interface
 {
-    class Cancel_ticket : IUser
+    class Show_route : IUser
     {
         public static SqlConnection conn;
         public static SqlCommand cmd;
         public static IDataReader dr;
+
         public void User_inputs()
         {
             try
             {
-                Console.WriteLine();
-                Console.WriteLine("***   Cancel ticket by user   ***");
                 conn = Database.Connection();
-
                 Console.WriteLine();
-                Console.Write("Enter your PNR number : ");
-                int pnr = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("***   Displaying all Trains Source and Destination Details to User   ***");
+                Console.WriteLine();
 
-                cmd = new SqlCommand("sp_Cancelticket", conn);
+                // Create a command object for the stored procedure
+                cmd = new SqlCommand("sp_route", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@pnr", pnr);
+                dr = cmd.ExecuteReader();
+                //Console.WriteLine();
+               
 
-                Console.WriteLine();
-                cmd.ExecuteNonQuery();
-                ITrainFactory Trainfactory;
-                Trainfactory = new UserFactory();
-                IUser userPerform = Trainfactory.CreateUser(); // Get the user actions
-                userPerform.User_inputs();
+                while(dr.Read())
+                {
+                    Console.WriteLine($" {dr[0]} ---------> {dr[1]} ");
+                }
+                dr.Close();
             }
-            catch (Exception cancel)
+            catch (Exception route)
             {
-                Console.WriteLine($"Cancelling Status : {cancel.Message}");
+                Console.WriteLine(route.Message);
             }
             finally
             {

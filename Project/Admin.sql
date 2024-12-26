@@ -107,9 +107,18 @@ begin
 	end;
 end;
 
+-- Procedure for Show Route 
+
+create or alter procedure sp_route
+as
+  begin
+      select distinct TSource,Destination from Trains 
+end;
+
+
+
 
 select * from Trains
 select * from Bookings
 
-drop table Bookings
-drop table Trains
+

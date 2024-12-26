@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Mini_project.Abstract_factory;
+using Mini_project.GatewaytoUser_Admin;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -38,7 +39,7 @@ namespace Mini_project.Admin_Interface
                 Console.WriteLine();
                 dr = cmd.ExecuteReader();
                 Console.WriteLine();
-                Console.WriteLine($" Displaying {from} to {to} Cancelled tickets details ");
+                Console.WriteLine($"***  Displaying Cancelled tickets details from  {from} <-------> {to}");
                 Console.WriteLine();
                 Console.WriteLine("Train id  || PNR No  ||    Name    ||   Age   ||    Gender   ||   Class   ||   Berth   ||   Status");
                 while (dr.Read())
@@ -54,6 +55,10 @@ namespace Mini_project.Admin_Interface
             }
             finally
             {
+                ITrainFactory Trainfactory;
+                Trainfactory = new AdminFactory();
+                IAdmin adminPerform = Trainfactory.CreateAdmin(); // Get the admin actions
+                adminPerform.Admin_Inputs();
                 conn.Close();
             }
         }

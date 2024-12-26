@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Mini_project.Abstract_factory;
 using System.Data;
 using System.Data.SqlClient;
+using Mini_project.GatewaytoUser_Admin;
 
 namespace Mini_project.User_interface
 {
@@ -20,7 +21,7 @@ namespace Mini_project.User_interface
             {
                 conn = Database.Connection();
                 Console.WriteLine();
-                Console.WriteLine("***   Displaying trains details by user   ***");
+                Console.WriteLine("***   Displaying trains details for user   ***");
                 Console.Write("Enter Source Point : ");
                 string from = Console.ReadLine();
 
@@ -50,6 +51,10 @@ namespace Mini_project.User_interface
             }
             finally
             {
+                ITrainFactory Trainfactory;
+                Trainfactory = new UserFactory();
+                IUser userPerform = Trainfactory.CreateUser(); // Get the user actions
+                userPerform.User_inputs();
                 conn.Close();
             }
         }

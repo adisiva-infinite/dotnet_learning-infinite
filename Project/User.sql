@@ -82,7 +82,7 @@ as
             insert into Bookings values (@train_id, @pnr, @pname, @p_age, @gender, @Typeofclass, @berth, @from, @to,'Booked');
  
             update Trains set Available_2A = Available_2A - @seats where Train_no = @train_id;
-            set @printStatus = 'Booking Success ';
+            set @printStatus = 'Booking Success';
         end
         else
         begin
@@ -124,6 +124,23 @@ begin
 	     return;
 	  end;
 	else select * from Trains where TSource = @Source and Destination=@Destination
+end;
+
+
+-- showing all trains for admin
+
+create or alter procedure sp_alltrains
+as
+ begin
+    select * from Trains;
+end;
+
+-- procedure for delete train
+
+create or alter procedure sp_trains
+as
+ begin
+    select * from Trains where IsActive <> 'InActive'
 end;
 
 -- creacting procedure for checking trains is available for user from address to destination
@@ -186,7 +203,7 @@ as
 	   raiserror ('Train is not exist for this route',16,1)
 	   return
 	end;
-	if not exists (select * from Bookings where Source = @source and Destination = @destination)
+	if not exists (select * from Bookings where Source = @source and Destination = @destination and status = 'Cancelled')
 	 begin
 	   raiserror ('Train is available no one is cancel their ticket',16,1)
 	 end;
@@ -207,10 +224,11 @@ as
 		 return;
 	end;
      select @trainid = Train_id, @class = Class from Bookings where PNR_No = @pnr and status = 'Booked'
-	 if @class = '1A'
+	 begin
+	 if @class = '1A' 
 	   begin
 		 update Bookings set Status = 'Cancelled' where PNR_No = @pnr;
-		 update Trains set Available_1A = Available_1A + 1;
+		 update Trains set Available_1A = Available_1A + 1 where Train_no = @trainid;
 		 raiserror('Ticket Cancelled Successfully...',16,1);
 		 return;
 	   end;
@@ -218,7 +236,7 @@ as
 	 else if @class = '2A'
 	   begin
 		update Bookings set Status = 'Cancelled' where PNR_No = @pnr;
-		update Trains set Available_2A = Available_2A + 1;
+		update Trains set Available_2A = Available_2A + 1 where Train_no = @trainid;
 		raiserror('Ticket Cancelled Successfully...',16,1);
 		 return;
 	   end
@@ -226,12 +244,13 @@ as
 	 else if @class = 'Sleeper'
 	   begin
 		update Bookings set Status = 'Cancelled' where PNR_No = @pnr;
-		update Trains set Available_Sleeper = Available_Sleeper + 1;
+		update Trains set Available_Sleeper = Available_Sleeper + 1 where Train_no = @trainid;
 		raiserror('Ticket Cancelled Successfully...',16,1);
 		 return;
 	   end;
 	   else raiserror('Incorrect PNR no',16,1);
 		 return;
+		 end;
   end;
 
 select * from Trains	

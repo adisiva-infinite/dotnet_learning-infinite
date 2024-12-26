@@ -9,16 +9,18 @@ using Mini_project.Abstract_factory;
 
 namespace Mini_project
 {
-    public class Client
+    public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("*** Indian Railways ***");
+            Console.WriteLine("*** Indian Railways Reservations ***");
             try
             {
-               while(true)
+                while (true)
                 {
                     ITrainFactory Trainfactory;
+                    Console.WriteLine();
+                    Console.WriteLine("==========================================================================================");
                     Console.WriteLine();
                     Console.Write("*** Choose USER / ADMIN / EXIT : ");
                     string u1 = Console.ReadLine();
@@ -36,7 +38,9 @@ namespace Mini_project
                         adminPerform.Admin_Inputs();
                     }
                     else if (u1.Equals("exit") || u1.Equals("EXIT")) return;
+                    else Console.WriteLine("Invalid input...");
                 }
+
             }
             catch(ArgumentException ee)
             {

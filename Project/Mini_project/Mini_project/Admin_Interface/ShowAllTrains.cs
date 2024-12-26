@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace Mini_project.Admin_Interface
 {
-    class Delete_trains : IAdmin
+    class ShowAllTrains : IAdmin
     {
         public static SqlConnection conn;
         public static SqlCommand cmd;
@@ -20,43 +20,25 @@ namespace Mini_project.Admin_Interface
             try
             {
                 Console.WriteLine();
-                Console.WriteLine("***   Delete train details by admin   ***");               
+                Console.WriteLine("***  train details for admin   ***");
                 conn = Database.Connection();
 
                 // Create a command object for the stored procedure
-                cmd = new SqlCommand("sp_trains", conn);
+                cmd = new SqlCommand("sp_alltrains", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                Console.WriteLine();
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    Console.WriteLine();
                     Console.WriteLine("---------------------------------------------------------------------------------------------------------------------");
                     Console.WriteLine($"Train no : {dr[0]} | Name : {dr[1]} | 1A : {dr[3]} | 2A : {dr[5]} | Sleeper: {dr[7]} | {dr[8]} <----> {dr[9]} | Status : {dr[10]}");
 
                 }
-                dr.Close();
-
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.Write("Enter Train num for delete : ");
-                int num = Convert.ToInt32(Console.ReadLine());
-
-                // Create a command object for the stored procedure
-                cmd = new SqlCommand("sp_deleteTrain", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@trainno", num);
-
-                Console.WriteLine();
-                dr = cmd.ExecuteReader();
-                dr.Close();
-                Console.WriteLine();
-                Console.WriteLine($" Deleting {num} train details ");
-                Console.WriteLine();
             }
-            catch(Exception delete)
+            catch (Exception Train)
             {
-                Console.WriteLine($"Update status : {delete.Message}");
+                Console.WriteLine($"Update status : {Train.Message}");
             }
             finally
             {

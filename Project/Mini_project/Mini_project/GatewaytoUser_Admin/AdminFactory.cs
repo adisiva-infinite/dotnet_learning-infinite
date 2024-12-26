@@ -18,7 +18,9 @@ namespace Mini_project.GatewaytoUser_Admin
         public IAdmin CreateAdmin()
         {
             Console.WriteLine();
-            Console.Write("Enter 1.Addtrain || 2.Deletetrain || 3.Modifytrain || 4.Show all bookings || 5.User Cancelled tickets  || 6.Exit : ");
+            Console.WriteLine(" 1.Addtrain | 2.Deletetrain | 3.Modifytrain | 4.Show all bookings | 5.Show all Cancelled tickets  | 6.All trains  | 7.Exit  ");
+            Console.WriteLine();
+            Console.Write("Choose (1/2/3/4/5/6/7) : ");
             int res = Convert.ToInt32(Console.ReadLine());
             switch (res)
             {
@@ -38,6 +40,9 @@ namespace Mini_project.GatewaytoUser_Admin
                     return new User_Cancelled_Tickets();
                     break;
                 case 6:
+                    return new ShowAllTrains();
+                    break;
+                case 7:
                     return new Exit();
                     break;
                 default:

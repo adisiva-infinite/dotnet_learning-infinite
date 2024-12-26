@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Mini_project.Abstract_factory;
+using Mini_project.GatewaytoUser_Admin;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -112,6 +113,7 @@ namespace Mini_project.User_interface
 
                 }
                 if (booking == num) Console.WriteLine("Booked Successfully....");
+               
 
             }
             catch (Exception booking)
@@ -120,6 +122,10 @@ namespace Mini_project.User_interface
             }
             finally
             {
+                ITrainFactory Trainfactory;
+                Trainfactory = new UserFactory();
+                IUser userPerform = Trainfactory.CreateUser(); // Get the user actions
+                userPerform.User_inputs();
                 conn.Close();
             }
         }
