@@ -1,0 +1,17 @@
+﻿@model Assessment_MVCApplication.Models.Customer
+@{
+    ViewBag.Title = "CustomerOrder";
+}
+
+<h2>CustomerOrderWithOrder_ID = 10248</h2>
+@if (Model != null)
+{
+<p>Customer ID: @Model.CustomerID</p>
+<p>Company Name: @Model.CompanyName</p>
+<p>Contact Name: @Model.ContactName</p>
+<p>Country: @Model.Country</p> }
+else
+{
+<p>No ID Found</p>
+}
+
