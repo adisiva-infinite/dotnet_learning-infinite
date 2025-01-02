@@ -13,7 +13,7 @@ namespace Assessment_CodeFirst.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202501021325220_Movie Migrations"; }
+            get { return "202501021645062_Movie Migrations"; }
         }
         
         string IMigrationMetadata.Source

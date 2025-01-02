@@ -132,9 +132,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202501021325220_Movie Migrations.cs" />
-    <Compile Include="Migrations\202501021325220_Movie Migrations.designer.cs">
-      <DependentUpon>202501021325220_Movie Migrations.cs</DependentUpon>
+    <Compile Include="Migrations\202501021645062_Movie Migrations.cs" />
+    <Compile Include="Migrations\202501021645062_Movie Migrations.designer.cs">
+      <DependentUpon>202501021645062_Movie Migrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -179,10 +179,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Movie\Create.cshtml" />
     <Content Include="Views\Movie\Edit.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
-    <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Movie\MoviesByYear.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -201,8 +202,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202501021325220_Movie Migrations.resx">
-      <DependentUpon>202501021325220_Movie Migrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202501021645062_Movie Migrations.resx">
+      <DependentUpon>202501021645062_Movie Migrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -11,16 +11,16 @@ namespace Assessment_CodeFirst.Controllers
     public class MovieController : Controller
     {
         // GET: Movie
-        IMovieRepository<Movie> mv = null;
+        IMovieRepository _mv = null;
 
         public MovieController()
         {
-            mv = new MovieRepository<Movie>();
+            _mv = new MovieRepository();
         }
         public ActionResult Index()
         {
-            var mvd = mv.GetAll();
-            return View(mv);
+            var mvd = _mv.GetAll();
+            return View(mvd);
         }
 
         public ActionResult Create()
@@ -33,16 +33,19 @@ namespace Assessment_CodeFirst.Controllers
         {
             if (ModelState.IsValid)
             {
-                mv.Create(m);
-                mv.Save();
+                _mv.Create(m);
                 return RedirectToAction("Index");
             }
             return View(m);
         }
 
-        public ActionResult Edit(int Id)
+        public ActionResult Edit(int id)
         {
-            var movie = mv.GetById(Id);
+            var movie = _mv.GetById(id);
+            if(movie == null)
+            {
+                return HttpNotFound();
+            }
             return View(movie);
         }
 
@@ -51,8 +54,7 @@ namespace Assessment_CodeFirst.Controllers
         {
             if (ModelState.IsValid)
             {
-                mv.Update(m);
-                mv.Save();
+                _mv.Edit(m);
                 return RedirectToAction("Index");
             }
             else
@@ -63,8 +65,15 @@ namespace Assessment_CodeFirst.Controllers
 
         public ActionResult Details(int id)
         {
-            var moviedetails = mv.GetById(id);
+            var moviedetails = _mv.GetById(id);
             return View(moviedetails);
+        }
+
+        // Display movies by year
+        public ActionResult MoviesByYear(int year)
+        {
+            var movies = _mv.GetAllMoviesByYear(year);
+            return View(movies);
         }
     }
 }

@@ -11,13 +11,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Mid)
+            @Html.DisplayNameFor(model => model.Moviename)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Mid)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mid)
+            @Html.DisplayNameFor(model => model.DateofRelease)
         </th>
         <th></th>
     </tr>
@@ -26,9 +23,6 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Mid)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Moviename)
             </td>
             <td>
@@ -36,7 +30,8 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Mid }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Mid}) |
+                @Html.ActionLink("Details", "Details", new { id = item.Mid }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Mid })
             </td>
         </tr>
     }
