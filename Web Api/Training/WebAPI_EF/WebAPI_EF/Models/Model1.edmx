@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Assignment2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DEPT">
+          <Key>
+            <PropertyRef Name="Dept_no" />
+          </Key>
+          <Property Name="Dept_no" Type="int" Nullable="false" />
+          <Property Name="Dept_name" Type="varchar" MaxLength="20" />
+          <Property Name="loc" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Emp">
+          <Key>
+            <PropertyRef Name="Emp_id" />
+          </Key>
+          <Property Name="Emp_id" Type="int" Nullable="false" />
+          <Property Name="Ename" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Mgr_id" Type="int" />
+          <Property Name="Hiredate" Type="date" Nullable="false" />
+          <Property Name="Salary" Type="float" />
+          <Property Name="Com" Type="int" />
+          <Property Name="Dept_no" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Assignment2.dbo.Employe' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Employe">
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="FirstName" Type="varchar" MaxLength="40" />
+          <Property Name="LastName" Type="varchar" MaxLength="40" />
+          <Property Name="Title" Type="varchar" MaxLength="40" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="DOJ" Type="date" />
+          <Property Name="City" Type="varchar" MaxLength="40" />
+        </EntityType>-->
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="emp_no" />
+          </Key>
+          <Property Name="emp_no" Type="int" Nullable="false" />
+          <Property Name="E_name" Type="varchar" MaxLength="50" />
+          <Property Name="Sal" Type="float" />
+          <Property Name="DOJ" Type="date" />
+        </EntityType>
+        <EntityType Name="Holidays">
+          <Key>
+            <PropertyRef Name="holiday_date" />
+          </Key>
+          <Property Name="holiday_date" Type="date" Nullable="false" />
+          <Property Name="holiday_name" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Marks">
+          <Key>
+            <PropertyRef Name="Markid" />
+          </Key>
+          <Property Name="Markid" Type="int" Nullable="false" />
+          <Property Name="Stdid" Type="int" />
+          <Property Name="Score" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Assignment2.dbo.rectangle' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="rectangle">
+          <Property Name="lengthh" Type="int" />
+          <Property Name="breadth" Type="int" />
+        </EntityType>-->
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Stdid" />
+          </Key>
+          <Property Name="Stdid" Type="int" Nullable="false" />
+          <Property Name="Sname" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__Emp__Dept_no__38996AB5">
+          <End Role="DEPT" Type="Self.DEPT" Multiplicity="0..1" />
+          <End Role="Emp" Type="Self.Emp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPT">
+              <PropertyRef Name="Dept_no" />
+            </Principal>
+            <Dependent Role="Emp">
+              <PropertyRef Name="Dept_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Marks__Stdid__73BA3083">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="Marks" Type="Self.Marks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Stdid" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="Stdid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Assignment2ModelStoreContainer">
+          <EntitySet Name="DEPT" EntityType="Self.DEPT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Emp" EntityType="Self.Emp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Holidays" EntityType="Self.Holidays" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Marks" EntityType="Self.Marks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Emp__Dept_no__38996AB5" Association="Self.FK__Emp__Dept_no__38996AB5">
+            <End Role="DEPT" EntitySet="DEPT" />
+            <End Role="Emp" EntitySet="Emp" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Marks__Stdid__73BA3083" Association="Self.FK__Marks__Stdid__73BA3083">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Assignment2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DEPT">
+          <Key>
+            <PropertyRef Name="Dept_no" />
+          </Key>
+          <Property Name="Dept_no" Type="Int32" Nullable="false" />
+          <Property Name="Dept_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="loc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Emps" Relationship="Self.FK__Emp__Dept_no__38996AB5" FromRole="DEPT" ToRole="Emp" />
+        </EntityType>
+        <EntityType Name="Emp">
+          <Key>
+            <PropertyRef Name="Emp_id" />
+          </Key>
+          <Property Name="Emp_id" Type="Int32" Nullable="false" />
+          <Property Name="Ename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Job" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mgr_id" Type="Int32" />
+          <Property Name="Hiredate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Salary" Type="Double" />
+          <Property Name="Com" Type="Int32" />
+          <Property Name="Dept_no" Type="Int32" />
+          <NavigationProperty Name="DEPT" Relationship="Self.FK__Emp__Dept_no__38996AB5" FromRole="Emp" ToRole="DEPT" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="emp_no" />
+          </Key>
+          <Property Name="emp_no" Type="Int32" Nullable="false" />
+          <Property Name="E_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sal" Type="Double" />
+          <Property Name="DOJ" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Holiday">
+          <Key>
+            <PropertyRef Name="holiday_date" />
+          </Key>
+          <Property Name="holiday_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="holiday_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mark">
+          <Key>
+            <PropertyRef Name="Markid" />
+          </Key>
+          <Property Name="Markid" Type="Int32" Nullable="false" />
+          <Property Name="Stdid" Type="Int32" />
+          <Property Name="Score" Type="Int32" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Marks__Stdid__73BA3083" FromRole="Marks" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Stdid" />
+          </Key>
+          <Property Name="Stdid" Type="Int32" Nullable="false" />
+          <Property Name="Sname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Marks" Relationship="Self.FK__Marks__Stdid__73BA3083" FromRole="Student" ToRole="Marks" />
+        </EntityType>
+        <Association Name="FK__Emp__Dept_no__38996AB5">
+          <End Role="DEPT" Type="Self.DEPT" Multiplicity="0..1" />
+          <End Role="Emp" Type="Self.Emp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPT">
+              <PropertyRef Name="Dept_no" />
+            </Principal>
+            <Dependent Role="Emp">
+              <PropertyRef Name="Dept_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Marks__Stdid__73BA3083">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Stdid" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="Stdid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Assignment2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DEPTs" EntityType="Self.DEPT" />
+          <EntitySet Name="Emps" EntityType="Self.Emp" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Holidays" EntityType="Self.Holiday" />
+          <EntitySet Name="Marks" EntityType="Self.Mark" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <AssociationSet Name="FK__Emp__Dept_no__38996AB5" Association="Self.FK__Emp__Dept_no__38996AB5">
+            <End Role="DEPT" EntitySet="DEPTs" />
+            <End Role="Emp" EntitySet="Emps" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Marks__Stdid__73BA3083" Association="Self.FK__Marks__Stdid__73BA3083">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Assignment2ModelStoreContainer" CdmEntityContainer="Assignment2Entities">
+          <EntitySetMapping Name="DEPTs">
+            <EntityTypeMapping TypeName="Assignment2Model.DEPT">
+              <MappingFragment StoreEntitySet="DEPT">
+                <ScalarProperty Name="Dept_no" ColumnName="Dept_no" />
+                <ScalarProperty Name="Dept_name" ColumnName="Dept_name" />
+                <ScalarProperty Name="loc" ColumnName="loc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Emps">
+            <EntityTypeMapping TypeName="Assignment2Model.Emp">
+              <MappingFragment StoreEntitySet="Emp">
+                <ScalarProperty Name="Emp_id" ColumnName="Emp_id" />
+                <ScalarProperty Name="Ename" ColumnName="Ename" />
+                <ScalarProperty Name="Job" ColumnName="Job" />
+                <ScalarProperty Name="Mgr_id" ColumnName="Mgr_id" />
+                <ScalarProperty Name="Hiredate" ColumnName="Hiredate" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Com" ColumnName="Com" />
+                <ScalarProperty Name="Dept_no" ColumnName="Dept_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="Assignment2Model.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="emp_no" ColumnName="emp_no" />
+                <ScalarProperty Name="E_name" ColumnName="E_name" />
+                <ScalarProperty Name="Sal" ColumnName="Sal" />
+                <ScalarProperty Name="DOJ" ColumnName="DOJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Holidays">
+            <EntityTypeMapping TypeName="Assignment2Model.Holiday">
+              <MappingFragment StoreEntitySet="Holidays">
+                <ScalarProperty Name="holiday_date" ColumnName="holiday_date" />
+                <ScalarProperty Name="holiday_name" ColumnName="holiday_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Marks">
+            <EntityTypeMapping TypeName="Assignment2Model.Mark">
+              <MappingFragment StoreEntitySet="Marks">
+                <ScalarProperty Name="Markid" ColumnName="Markid" />
+                <ScalarProperty Name="Stdid" ColumnName="Stdid" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="Assignment2Model.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="Stdid" ColumnName="Stdid" />
+                <ScalarProperty Name="Sname" ColumnName="Sname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
