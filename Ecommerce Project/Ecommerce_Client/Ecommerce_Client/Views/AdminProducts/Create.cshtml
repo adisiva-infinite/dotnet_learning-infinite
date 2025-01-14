@@ -1,0 +1,129 @@
+﻿@model Ecommerce_Client.Models.Product
+@{ ViewBag.Title = "Create"; }
+
+<h2>Create</h2>
+
+<style>
+    .form-control::placeholder {
+        color: #888;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    .form-control[title] {
+        position: relative;
+    }
+
+        .form-control[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            top: -30px;
+            left: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+</style>
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    <h4>Product</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <!-- Product Name Field -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Product Name" } })
+                            @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Category Field -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CategoryId, "CategoryId", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("CategoryId", null, htmlAttributes: new { @class = "form-control", title = "Select a Category" })
+                            @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Model Number Field -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ModelNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.ModelNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Model Number" } })
+                            @Html.ValidationMessageFor(model => model.ModelNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Model Name Field -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ModelName, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.ModelName, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Model Name" } })
+                            @Html.ValidationMessageFor(model => model.ModelName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Unit Cost Field -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.UnitCost, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.UnitCost, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Unit Cost" } })
+                            @Html.ValidationMessageFor(model => model.UnitCost, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Description Field -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Description" } })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Product Image Field -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ProductImage, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.ProductImage, new { htmlAttributes = new { @class = "form-control", placeholder = "Upload Product Image" } })
+                            @Html.ValidationMessageFor(model => model.ProductImage, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Stock Field -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Stock, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Stock, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Stock Quantity" } })
+                            @Html.ValidationMessageFor(model => model.Stock, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-primary" style="width: 100%;" />
+                        </div>
+                    </div>
+                </div>}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-secondary" })
+</div>
+

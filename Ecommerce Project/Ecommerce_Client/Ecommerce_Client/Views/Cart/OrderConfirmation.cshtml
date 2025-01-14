@@ -1,0 +1,26 @@
+﻿@{ ViewBag.Title = "Order Confirmation"; }
+<div class="container mt-5">
+    <div class="card shadow-lg p-4 rounded-lg">
+        <div class="text-center">
+            <img src="https://t4.ftcdn.net/jpg/05/71/22/67/360_F_571226783_4T5vsFPmO6jadQ6SlVxUzfBpF22n3MUD.jpg"
+                 class="img-thumbnail mb-3"
+                 style="width: 350px; border: none;"
+                 alt="Order Confirmed" />
+        </div>
+        <h2 class="text-center text-success mb-4">Order Confirmation</h2>
+        <p class="text-center lead">Thank you for your purchase! Your order has been successfully placed.</p>
+        <p class="text-center text-muted">You will receive an email confirmation shortly with your order details.</p>
+        <p class="text-center text-info mt-3">
+            Your order will be delivered to your address within the next <strong>7 days</strong> 
+        </p>
+        <p>
+            Payment mode is <b style="color:navy;"><i>Cash on Delivery..!</i></b>
+        </p>
+        <div class="text-center mt-4">
+            <a href="@Url.Action("SelectCategory", "CustomerCategory")"
+               class="btn btn-primary btn-lg px-4">
+                Continue Shopping
+            </a>
+        </div>
+    </div>
+</div>

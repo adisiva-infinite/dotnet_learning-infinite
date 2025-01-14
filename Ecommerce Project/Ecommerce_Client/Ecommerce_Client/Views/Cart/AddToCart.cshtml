@@ -1,0 +1,26 @@
+﻿@model Ecommerce_Client.Models.Product
+
+@{ ViewBag.Title = "Add to Cart"; }
+
+<h2>@Model.ProductName</h2>
+
+<div>
+    <img src="@Model.ProductImage" alt="@Model.ProductName" class="img-thumbnail" style="max-width: 300px;" />
+</div>
+
+<h4>@Model.Description</h4>
+<p><strong>Price:</strong> @Model.UnitCost.ToString("C")</p>
+
+<form action="@Url.Action("AddToCart", "Cart")" method="post">
+    <input type="hidden" name="productId" value="@Model.ProductId" />
+    <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control" style="width: 60px;" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add to Cart</button>
+</form>
+
+<hr />
+
+<a href="@Url.Action("Cart", "Cart")" class="btn btn-secondary">Go to Cart</a>
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary">Continue Shopping</a>

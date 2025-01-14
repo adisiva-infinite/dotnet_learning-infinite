@@ -1,0 +1,149 @@
+﻿@model IEnumerable<Ecommerce_Client.Models.Product>
+@{ ViewBag.Title = "Products List"; }
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        overflow-y: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    h2 {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 1.8em;
+        color: #333;
+    }
+    th, td {
+        text-align: center;
+        padding: 10px;
+    }
+
+    th {
+        background-color: #f8f9fa;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #e9ecef;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin: 5px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+        }
+
+    .back-link {
+        margin-top: 20px;
+        display: inline-block;
+    }
+    p {
+        text-align: center;
+    }
+</style>
+
+<h2>Products List</h2>
+
+<p>
+    @Html.ActionLink("Create New Product", "Create", "AdminProducts", new { categoryId = ViewBag.CategoryId }, new { @class = "btn btn-primary" })
+</p>
+<!-- Products Table -->
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Model Number</th>
+            <th>Model Name</th>
+            <th>Unit Cost</th>
+            <th>Description</th>
+            <th>Product Image</th>
+            <th>Category Name</th>
+            <th>Product Stock</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+<tr>
+    <td>@product.ProductId</td>
+    <td>@product.ProductName</td>
+    <td>@product.ModelNumber</td>
+    <td>@product.ModelName</td>
+    <td>@product.UnitCost</td>
+    <td>@product.Description</td>
+    <td>
+        @if (!string.IsNullOrEmpty(product.ProductImage))
+        {
+<img src="@product.ProductImage" alt="@product.ProductName" style="width: 100px;" /> }
+else
+{
+<span>No Image</span>}
+    </td>
+    <td>@product.Category.CategoryName</td>
+    <td>@product.Stock</td>
+    <td>
+        <!-- Edit, Delete, and View actions -->
+        @Html.ActionLink("Edit", "Edit", new { id = product.ProductId }, new { @class = "btn btn-success" })
+        @Html.ActionLink("Details", "Details", new { id = product.ProductId }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Delete", "Delete", new { id = product.ProductId }, new { @class = "btn btn-danger" })
+    </td>
+</tr>
+}
+    </tbody>
+</table>
+<a href="@Url.Action("Index", "AdminDashboard")" class="back-link btn btn-warning btn-lg">Back to Admin Dashboard</a>
+
+

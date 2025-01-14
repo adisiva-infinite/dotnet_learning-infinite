@@ -1,0 +1,24 @@
+﻿@*@{
+    ViewBag.Title = "WelcomePage";
+}
+
+<div style="text-align: center; padding: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div>
+        <img src="C:\dotnet_training\Ecommerce Project\Ecommerce_Client\Images\Logo.png" , alt="Welcome Image" style="width: 20%; max-width: 300px; height: auto; margin: 20px 0;" />
+    </div>
+
+    <h1>Welcome to CyberShopee!</h1>
+    <b>Please select your role to proceed:  </b>
+
+    <form method="post" action="@Url.Action("Login", "AdminLogin")">
+        <button type="submit" name="role" value="Admin" class="btn btn-primary" style="margin: 20px; padding: 10px 20px;background-color:white; border-color: #2e6da4; color: #fff ">  @Html.ActionLink("Admin Login", "Login", "CustomerLogin")</button>
+    </form>
+
+    <form method="post" action="@Url.Action("Login", "CustomerLogin")">
+        <button type="submit" name="role" value="User" class="btn btn-secondary" style="margin: 20px; padding: 10px 20px; background-color:white; border-color: #2e6da4; color: #fff ">  @Html.ActionLink("Customer Login", "Login", "CustomerLogin")</button>
+    </form>
+    <form method="post" action="@Url.Action("Register", "CustomerLogin")">
+        <button type="submit" name="role" value="Register" class="btn btn-warning" style="margin: 20px; padding: 10px 20px; background-color:white; border-color: #2e6da4; color: #fff ">  @Html.ActionLink("Customer Login", "Login", "CustomerLogin")</button>
+    </form>
+</div>*@
+

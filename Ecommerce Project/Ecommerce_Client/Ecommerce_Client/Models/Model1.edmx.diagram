@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0b4026959ab248ea9cbd76aead3749ce" Name="Diagram1">
+        <EntityTypeShape EntityType="EcommerceModel.Admin" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel.Category" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel.Customer" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel.OrderDetail" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel.Order" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel.Product" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel.ShoppingCart" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="EcommerceModel.FK__Products__Catego__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel.FK__OrderDeta__Custo__3D2915A8" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel.FK__Orders__Customer__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel.FK__ShoppingC__Custo__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel.FK__OrderDeta__Order__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel.FK__OrderDeta__Produ__3E1D39E1" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel.FK__ShoppingC__Produ__17F790F9" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

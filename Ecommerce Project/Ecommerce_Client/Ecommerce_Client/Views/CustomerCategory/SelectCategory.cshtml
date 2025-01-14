@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+            nav h3 {
+                margin: 0;
+            }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            margin-top: 60px; /* Ensure content starts below the navbar */
+            min-height: 100vh;
+            padding-bottom: 80px; /* Space for the bottom button */
+        }
+
+        /* Back Button */
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+        }
+
+            .back-button:hover {
+                background-color: #0056b3;
+            }
+
+        /* Heading */
+        .d-flex {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 20px;
+        }
+
+            .d-flex h2 {
+                margin: 0;
+                font-size: 28px;
+                color: #444;
+                padding-left: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                border-bottom: 2px solid #007bff;
+                padding-bottom: 5px;
+            }
+
+        /* Category List */
+        .Categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border: 7px solid rgb(240, 240, 240);
+            border-left-width: 10px;
+            border-right-width: 10px;
+        }
+
+        .Category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid rgb(240, 240, 240);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .Category:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+        .img2 {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .Category:hover .img2 {
+            transform: scale(1.1);
+        }
+
+        .Category span a {
+            font-size: 16px;
+            color: rgb(10, 10, 19);
+            text-decoration: none;
+        }
+
+            .Category span a:hover {
+                color: #007bff;
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <h3>My Navbar</h3>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Heading -->
+        <div class="d-flex">
+            <h2>Select Category</h2>
+        </div>
+
+        <!-- Category List -->
+        <div class="Categories">
+            @foreach (var category in Model)
+            {
+<div class="Category">
+    <img class="img2" src="@category.ProductImage" alt="@category.CategoryName Image" />
+    <span>
+        <a href="@Url.Action("ProductsByCategory", "CustomerCategory", new { categoryId = category.CategoryId })">
+            @category.CategoryName
+        </a>
+    </span>
+</div>            }
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="@Url.Action("Index", "CustomerDashboard")" class="back-button">Back</a>
+</body>
+</html>

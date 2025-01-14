@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        /* Navbar styling */
+        .navbar {
+            background-color: black;
+            padding: 10px 20px;
+        }
+
+            .navbar .navbar-brand {
+                color: white;
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+            .navbar .navbar-nav {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+                .navbar .navbar-nav li {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                    .navbar .navbar-nav li i {
+                        color: white;
+                        font-size: 25px;
+                    }
+
+                    .navbar .navbar-nav li a {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1.3rem;
+                    }
+
+                        .navbar .navbar-nav li a:hover {
+                            color: #f0ad4e; /* Bootstrap orange color */
+                        }
+
+        .container.body-content {
+            margin-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("CyberShopee", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <i class="bi bi-clock-history"></i>
+                        @Html.ActionLink("Account History", "CustomerOrders", "Order")
+                    </li>
+                    <li>
+                        <i class="bi bi-cart4"></i>
+                        @Html.ActionLink("Cart", "Cart", "Cart")
+                    </li>
+                    <li>
+                        <i class="bi bi-file-earmark-person"></i>
+                        @Html.ActionLink("Logout", "Index", "Home")
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

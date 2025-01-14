@@ -1,0 +1,178 @@
+﻿@model IEnumerable<Ecommerce_Client.Models.Product>
+@{ ViewBag.Title = "Products By Category"; }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px; /* Reduced container width */
+            padding: 10px; /* Reduced padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+            .product-card img {
+                max-width: 100%;
+                height: 120px; /* Reduced image height */
+                border-radius: 8px;
+                margin-bottom: 8px; /* Reduced margin */
+            }
+
+        .product-name {
+            font-size: 16px; /* Reduced font size */
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 14px; /* Reduced font size */
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 60px; /* Reduced input size */
+            padding: 5px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 15px; /* Reduced button padding */
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px; /* Reduced font size */
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .out-of-stock {
+            color: #dc3545;
+            font-size: 12px; /* Reduced font size */
+            margin-top: 8px;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Products in @ViewBag.CategoryName</h2>
+    <div class="products-container">
+        @foreach (var product in Model)
+        {
+<div class="product-card">
+    @if (!string.IsNullOrEmpty(product.ProductImage))
+    {
+<img src="@product.ProductImage" alt="@product.Description" /> }
+else
+{
+<div style="height: 120px; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; border-radius: 8px;">
+    <span>No Image</span>
+</div>          }
+
+    <div class="product-name">ProductName: @product.ProductName</div>
+    <div class="product-price">Price: @product.UnitCost/-</div>
+
+    @if (product.Stock > 0)
+    {
+        using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post, new { id = "addToCartForm-" + product.ProductId }))
+        {
+@Html.Hidden("productId", product.ProductId)
+                        <label style="display: flex; align-items: center; gap: 5px;">
+                            Quantity:
+                            <input type="number" name="quantity" value="1" min="1" class="form-control" />
+                        </label>
+                                                <button type="button" class="btn-primary add-to-cart-btn" id="addToCartBtn-@product.ProductId" onclick="handleAddToCart(@product.ProductId)">Add to Cart</button> }
+                                        }
+                                        else
+                                        {
+                        <div class="out-of-stock">Out of Stock</div>}
+</div>}
+    </div>
+
+    <script>
+    function handleAddToCart(productId) {
+            // Find the form and submit it
+            const form = document.getElementById(`addToCartForm-${productId}`);
+            const button = document.getElementById(`addToCartBtn-${productId}`);
+
+            // Submit the form via AJAX or directly
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(form)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Change button to "Go to Cart" after success
+                        button.textContent = "Go to Cart";
+                        button.classList.remove("btn-primary");
+                        button.classList.add("btn-success");
+                        button.onclick = () => {
+                            window.location.href = '/Cart/Cart'; // Redirect to the cart view
+                        };
+                    } else {
+                        alert("Failed to add to cart. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("An error occurred. Please try again.");
+                });
+        }</script>
+    <a href="@Url.Action("SelectCategory", "CustomerCategory")" class="back-button">Back</a>
+
+</body>
+</html>

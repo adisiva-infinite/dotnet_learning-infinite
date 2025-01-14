@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Ecommerce_Client.Controllers.Customer_Panel.CustomerOrderViewModel>
+@{ ViewBag.Title = "My Orders"; }
+
+<h2>My Orders</h2>
+
+@if (Model.Any())
+{
+    foreach (var order in Model)
+    {
+<div class="order-section">
+    <h4>Order ID: @order.OrderId</h4>
+    <p>
+        <strong>Order Date:</strong> @order.OrderDate.ToShortDateString() <br />
+        <strong>Ship Date:</strong> @(order.ShipDate?.ToShortDateString() ?? "Not Shipped Yet")
+    </p>
+    @if (order.OrderDetails.Any())
+    {
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Unit Cost</th>
+            <th>Total Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var detail in order.OrderDetails)
+        {
+<tr>
+    <td>
+        @if (!string.IsNullOrEmpty(detail.ProductImage))
+        {
+<img src="@detail.ProductImage" alt="@detail.ProductName" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;" /> }
+                            else
+                            {
+<div style="width: 50px; height: 50px; background-color: #f0f0f0; border-radius: 5px; display: flex; align-items: center; justify-content: center;">No Image</div>}
+    </td>
+    <td>@detail.ProductName</td>
+    <td>@detail.Quantity</td>
+    <td>₹ @detail.UnitCost.ToString("N2")</td> <!-- Adds ₹ symbol with 2 decimal places -->
+    <td>₹ @detail.TotalCost.ToString("N2")</td> <!-- Adds ₹ symbol with 2 decimal places -->
+</tr>                        }
+    </tbody>
+</table> }
+                    else
+                    {
+<p>No order details available for this order.</p>}
+</div>
+                    <hr /> }
+                                }
+                                else
+                                {
+                    <div class="alert alert-info">You have not placed any orders yet.</div>}
+
+<style>
+    .order-section {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+        .order-section h4 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .order-section p {
+            font-size: 14px;
+            color: #555;
+        }
+
+    .table {
+        width: 100%;
+        margin-top: 15px;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+    .alert-info {
+        background-color: #d9edf7;
+        color: #31708f;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    img {
+        border-radius: 5px;
+    }
+</style>

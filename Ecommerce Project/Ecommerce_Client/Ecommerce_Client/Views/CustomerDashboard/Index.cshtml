@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+
+            .btn-success:hover {
+                background-color: #218838;
+                transform: scale(1.05);
+            }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: none;
+        }
+
+            .slides img {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+            }
+
+        .dot-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+            .dot.active {
+                background-color: #717171;
+            }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar remains unchanged -->
+    <!-- Welcome Header -->
+    <h2 class="text-center mb-4">Welcome to Customer Dashboard...!</h2>
+
+    <!-- Display All Categories Button -->
+    <div class="text-center mb-4">
+        <a href="@Url.Action("SelectCategory", "CustomerCategory")" class="btn btn-success">Display All Categories</a>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slides">
+            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <div class="caption">Discover the newest smartphones</div>
+        </div>
+        <div class="slides">
+            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <div class="caption">Discover the newest smartphones</div>
+        </div>
+        <div class="slides">
+            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <div class="caption">Discover the newest smartphones</div>
+        </div>
+        <div class="slides">
+            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <div class="caption">Discover the newest smartphones</div>
+        </div>
+        <div class="slides">
+            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <div class="caption">Discover the newest smartphones</div>
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+
+    <!-- Dot navigation -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+    </div>
+
+    <script>let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Reset slide index if it exceeds the number of slides
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Remove "active" class from all dots
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // Display the current slide and highlight the corresponding dot
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+
+            // Change slide every 3 seconds
+            setTimeout(showSlides, 3000);
+        }
+
+        // Initialize slideshow
+        showSlides();</script>
+</body>
+</html>

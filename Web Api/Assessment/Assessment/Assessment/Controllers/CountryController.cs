@@ -8,7 +8,7 @@ using Assessment.Models;
 
 namespace Assessment.Controllers
 {
-    [RoutePrefix("api/User")]
+    //[RoutePrefix("api/User")]
     public class CountryController : ApiController
     {
         List<Country> CountryList = new List<Country>()
@@ -20,56 +20,90 @@ namespace Assessment.Controllers
 
         // Get 1
 
-        [HttpGet]
-        [Route("")]
-        public IHttpActionResult GetAllCountries()
-        {
-            return Ok(CountryList);
-        }
+        //[HttpGet]
+        //[Route("")]
+        //public IHttpActionResult GetAllCountries()
+        //{
+        //    return Ok(CountryList);
+        //}
+
+        //[HttpGet]
+        //[Route("{id:int}")]
+        //public IHttpActionResult GetCountryById(int id)
+        //{
+        //    var country = CountryList.FirstOrDefault(c => c.CountryId == id);
+        //    if (country == null)
+        //        return NotFound();
+        //    return Ok(country);
+        //}
+
+        //[HttpPost]
+        //[Route("")]
+        //public IHttpActionResult AddCountry([FromBody] Country country)
+        //{
+        //    if (country == null)
+        //        return BadRequest("Invalid data.");
+        //    CountryList.Add(country);
+        //    return Ok(country);
+        //}
+
+        //[HttpPut]
+        //[Route("{id:int}")]
+        //public IHttpActionResult UpdateCountry(int id, [FromBody] Country updateCountry)
+        //{
+        //    var country = CountryList.FirstOrDefault(c => c.CountryId == id);
+        //    if (country == null)
+        //        return NotFound();
+
+        //    country.CountryName = updateCountry.CountryName;
+        //    country.Capital = updateCountry.Capital;
+        //    return Ok(country);
+        //}
+
+        //[HttpDelete]
+        //[Route("{id:int}")]
+        //public IHttpActionResult DeleteCountry(int id)
+        //{
+        //    var country = CountryList.FirstOrDefault(c => c.CountryId == id);
+        //    if (country == null)
+        //        return NotFound();
+
+        //    CountryList.Remove(country);
+        //    return Ok();
+        //}
 
         [HttpGet]
-        [Route("{id:int}")]
-        public IHttpActionResult GetCountryById(int id)
+        public List<Country> GetCountries()
         {
-            var country = CountryList.FirstOrDefault(c => c.CountryId == id);
-            if (country == null)
-                return NotFound();
-            return Ok(country);
+            return CountryList;
         }
 
         [HttpPost]
-        [Route("")]
-        public IHttpActionResult AddCountry([FromBody] Country country)
+        public List<Country> Create([FromBody] Country country)
         {
-            if (country == null)
-                return BadRequest("Invalid data.");
             CountryList.Add(country);
-            return Ok(country);
+            return CountryList;
         }
-
         [HttpPut]
-        [Route("{id:int}")]
-        public IHttpActionResult UpdateCountry(int id, [FromBody] Country updateCountry)
+        public List<Country> Update(int id, [FromBody] Country country)
         {
-            var country = CountryList.FirstOrDefault(c => c.CountryId == id);
-            if (country == null)
-                return NotFound();
-
-            country.CountryName = updateCountry.CountryName;
-            country.Capital = updateCountry.Capital;
-            return Ok(country);
+            var existingCountry = CountryList.Find(c => c.CountryId == id);
+            if (existingCountry == null)
+            {
+            }
+            existingCountry.CountryName = country.CountryName;
+            existingCountry.Capital = country.Capital;
+            return CountryList;
         }
-
         [HttpDelete]
-        [Route("{id:int}")]
-        public IHttpActionResult DeleteCountry(int id)
+        public List<Country> Delete(int id)
         {
-            var country = CountryList.FirstOrDefault(c => c.CountryId == id);
+            var country = CountryList.Find(c => c.CountryId == id);
             if (country == null)
-                return NotFound();
-
+            {
+            }
             CountryList.Remove(country);
-            return Ok();
+            return CountryList;
         }
     }
 }

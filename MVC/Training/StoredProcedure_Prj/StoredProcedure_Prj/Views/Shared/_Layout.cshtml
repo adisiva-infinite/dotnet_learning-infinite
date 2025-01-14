@@ -20,10 +20,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Create", "Create", "ED")</li>
+                    <li>@Html.ActionLink("Add Employee", "Create", "ED")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Index", "Index", "ED")</li>
+                    <li>@Html.ActionLink("Employees", "Index", "ED")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                 </ul>
             </div>
@@ -31,7 +31,14 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <img src="https://images.unsplash.com/photo-1736148912326-aeeda15df88f" width="100%" />
+        @*<img src="https://images.unsplash.com/photo-1736148912326-aeeda15df88f" width="100%" />*@
+
+        <div class="d-flex justify-content-around">
+            <div style="height: 300px; width: 500px; border:1px solid black;">
+
+            </div>
+            <div style="height: 300px; width: 500px; border:1px solid black;"></div>
+        </div>
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>

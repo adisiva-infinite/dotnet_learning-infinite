@@ -1,0 +1,69 @@
+﻿@{ ViewBag.Title = "Index"; }
+<style>
+    /* General styling */
+    span {
+        font-size: 40px;
+        color: navy;
+        font-family: 'Arial', sans-serif;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .dashboard-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .dashboard-box {
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+        .dashboard-box a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    .categories-box {
+        background-color: #e0f7fa;
+        color: #006064;
+    }
+
+        .categories-box:hover {
+            background-color: #b2ebf2;
+            transform: scale(1.05);
+        }
+
+    .products-box {
+        background-color: #fff3e0;
+        color: #bf360c;
+    }
+
+        .products-box:hover {
+            background-color: #ffe0b2;
+            transform: scale(1.05);
+        }
+</style>
+
+<h2><span>W</span>elcome to Admin Dashboard...!</h2>
+<h3 style="text-align:center;">Here!</h3>
+
+<div class="dashboard-container">
+    <div class="dashboard-box categories-box">
+        <a href="@Url.Action("Index", "AdminCategory")">Categories</a>
+    </div>
+    <div class="dashboard-box products-box">
+        <a href="@Url.Action("Index", "AdminProducts")">Products</a>
+    </div>
+</div>
