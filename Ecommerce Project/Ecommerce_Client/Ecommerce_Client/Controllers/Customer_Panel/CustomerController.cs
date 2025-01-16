@@ -116,20 +116,16 @@ namespace Ecommerce_Client.Controllers.Customer_Panel
                     client.BaseAddress = new Uri("https://localhost:44307/api/");
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                    // Build the login URL with parameters
                     string loginUrl = $"Customer/Login?emailaddress={HttpUtility.UrlEncode(loginCustomer.EmailAddress)}&password={HttpUtility.UrlEncode(loginCustomer.Password)}";
                     HttpResponseMessage response = client.GetAsync(loginUrl).Result;
 
                     if (response.IsSuccessStatusCode)
                     {
-                        // Read the response content
                         var responseData = response.Content.ReadAsAsync<dynamic>().Result;
 
-                        // Assuming the response contains CustomerId and FullName
                         int customerId = responseData.CustomerId;
                         string fullName = responseData.FullName;
 
-                        // Log the CustomerId and FullName for debugging
                         System.Diagnostics.Debug.WriteLine($"Login Successful! CustomerId: {customerId}, FullName: {fullName}");
 
                         Session["CustomerId"] = customerId;
@@ -167,6 +163,8 @@ namespace Ecommerce_Client.Controllers.Customer_Panel
             try
             {
                 Session["CustomerId"] = null;
+                Session["FullName"] = null;
+                Session["Admin_Id"] = null;
                 Session["FullName"] = null;
                 //   Session["CartId"] = null;
 

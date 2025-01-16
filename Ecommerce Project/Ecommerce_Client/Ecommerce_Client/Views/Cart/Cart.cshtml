@@ -1,6 +1,19 @@
 ﻿@model IEnumerable<Ecommerce_Client.Models.ShoppingCart>
-
 @{ ViewBag.Title = "Your Shopping Cart"; }
+
+<style>
+    .back-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+    }
+</style>
 
 <h2>Your Shopping Cart</h2>
 
@@ -33,23 +46,59 @@ else
 <span>No Image</span>}
     </td>
     <td>@item.Product.ProductName</td>
-    <td>@item.Quantity</td>
-    <td>₹ @item.Product.UnitCost/-</td>
-    <td>₹ @(item.Quantity * item.Product.UnitCost)/-</td>
     <td>
-        <form action="@Url.Action("UpdateCart", "Cart")" method="post" style="display:inline;">
-            <input type="hidden" name="recordId" value="@item.RecordId" />
-            <input type="number" name="quantity" value="@item.Quantity" min="1" class="form-control" style="width: 60px; display:inline;" />
-            <button type="submit" class="btn btn-primary btn-sm">Update</button>
-        </form>
+        <div style="display: flex; align-items: center;">
+            <button class="btn btn-sm btn-secondary" onclick="updateQuantity(@item.RecordId, -1)">-</button>
+            <input type="number" id="quantity-@item.RecordId" value="@item.Quantity" min="1" class="form-control" style="width: 60px; text-align: center;" readonly />
+            <button class="btn btn-sm btn-secondary" onclick="updateQuantity(@item.RecordId, 1)">+</button>
+        </div>
+    </td>
+    <td>₹ @item.Product.UnitCost/-</td>
+    <td>₹ <span id="subtotal-@item.RecordId">@((item.Quantity * item.Product.UnitCost).ToString())</span>/-</td>
+    <td>
         <form action="@Url.Action("RemoveFromCart", "Cart")" method="post" style="display:inline;">
             <input type="hidden" name="recordId" value="@item.RecordId" />
             <button type="submit" class="btn btn-danger btn-sm">Remove</button>
         </form>
     </td>
-</tr>}
+</tr>
+}
     </tbody>
 </table>
 
-<h4>Total Amount :₹ @Model.Sum(i => i.Quantity * i.Product.UnitCost).ToString()/-</h4>
+                <h4>Total Amount: ₹ <span id="totalAmount">@Model.Sum(i => i.Quantity * i.Product.UnitCost).ToString()</span>/-</h4>
                                 <a href="@Url.Action("Checkout", "Cart")" class="btn btn-success">Proceed to Checkout</a>}
+<a href="@Url.Action("SelectCategory", "CustomerCategory")" class="back-button">Back</a>
+
+
+<script>
+    function updateQuantity(recordId, change) {
+        const quantityInput = document.getElementById(`quantity-${recordId}`);
+        let newQuantity = parseInt(quantityInput.value) + change;
+
+        if (newQuantity < 1) return;
+
+        quantityInput.value = newQuantity;
+
+        const unitPrice = parseFloat(quantityInput.closest('tr').querySelector('td:nth-child(4)').innerText.replace('₹', '').replace('/-', '').trim());
+        const subtotalElement = document.getElementById(`subtotal-${recordId}`);
+        const newSubtotal = newQuantity * unitPrice;
+        subtotalElement.textContent = newSubtotal.toFixed(2);
+
+        let totalAmount = 0;
+        document.querySelectorAll('span[id^="subtotal-"]').forEach(subtotal => {
+            totalAmount += parseFloat(subtotal.textContent);
+        });
+        document.getElementById('totalAmount').textContent = totalAmount.toFixed(2);
+
+        // Send the updated quantity to the server (optional, if needed for persistence)
+        fetch('@Url.Action("UpdateCart", "Cart")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+            },
+            body: JSON.stringify({ recordId: recordId, quantity: newQuantity })
+        });
+    }
+</script>

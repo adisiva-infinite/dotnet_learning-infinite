@@ -73,7 +73,7 @@
     <Property Name="Quantity" Type="int" Nullable="false" />
     <Property Name="DateCreated" Type="datetime" />
   </EntityType>
-  <Association Name="FK__OrderDeta__Custo__3D2915A8">
+  <Association Name="FK__OrderDeta__Custo__4C6B5938">
     <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
     <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
     <ReferentialConstraint>
@@ -85,7 +85,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrderDeta__Order__3C34F16F">
+  <Association Name="FK__OrderDeta__Order__4B7734FF">
     <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
     <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
     <ReferentialConstraint>
@@ -97,7 +97,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrderDeta__Produ__3E1D39E1">
+  <Association Name="FK__OrderDeta__Produ__4D5F7D71">
     <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
     <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
     <ReferentialConstraint>
@@ -109,7 +109,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Orders__Customer__10566F31">
+  <Association Name="FK__Orders__Customer__489AC854">
     <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
     <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
     <ReferentialConstraint>
@@ -121,7 +121,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Products__Catego__02084FDA">
+  <Association Name="FK__Products__Catego__45BE5BA9">
     <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
     <End Role="Products" Type="Self.Products" Multiplicity="*" />
     <ReferentialConstraint>
@@ -133,7 +133,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ShoppingC__Custo__17036CC0">
+  <Association Name="FK__ShoppingC__Custo__503BEA1C">
     <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
     <End Role="ShoppingCart" Type="Self.ShoppingCart" Multiplicity="*" />
     <ReferentialConstraint>
@@ -145,7 +145,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ShoppingC__Produ__17F790F9">
+  <Association Name="FK__ShoppingC__Produ__51300E55">
     <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
     <End Role="ShoppingCart" Type="Self.ShoppingCart" Multiplicity="*" />
     <ReferentialConstraint>
@@ -165,31 +165,31 @@
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ShoppingCart" EntityType="Self.ShoppingCart" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__OrderDeta__Custo__3D2915A8" Association="Self.FK__OrderDeta__Custo__3D2915A8">
+    <AssociationSet Name="FK__OrderDeta__Custo__4C6B5938" Association="Self.FK__OrderDeta__Custo__4C6B5938">
       <End Role="Customers" EntitySet="Customers" />
       <End Role="OrderDetails" EntitySet="OrderDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrderDeta__Order__3C34F16F" Association="Self.FK__OrderDeta__Order__3C34F16F">
+    <AssociationSet Name="FK__OrderDeta__Order__4B7734FF" Association="Self.FK__OrderDeta__Order__4B7734FF">
       <End Role="Orders" EntitySet="Orders" />
       <End Role="OrderDetails" EntitySet="OrderDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrderDeta__Produ__3E1D39E1" Association="Self.FK__OrderDeta__Produ__3E1D39E1">
+    <AssociationSet Name="FK__OrderDeta__Produ__4D5F7D71" Association="Self.FK__OrderDeta__Produ__4D5F7D71">
       <End Role="Products" EntitySet="Products" />
       <End Role="OrderDetails" EntitySet="OrderDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK__Orders__Customer__10566F31" Association="Self.FK__Orders__Customer__10566F31">
+    <AssociationSet Name="FK__Orders__Customer__489AC854" Association="Self.FK__Orders__Customer__489AC854">
       <End Role="Customers" EntitySet="Customers" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK__Products__Catego__02084FDA" Association="Self.FK__Products__Catego__02084FDA">
+    <AssociationSet Name="FK__Products__Catego__45BE5BA9" Association="Self.FK__Products__Catego__45BE5BA9">
       <End Role="Categories" EntitySet="Categories" />
       <End Role="Products" EntitySet="Products" />
     </AssociationSet>
-    <AssociationSet Name="FK__ShoppingC__Custo__17036CC0" Association="Self.FK__ShoppingC__Custo__17036CC0">
+    <AssociationSet Name="FK__ShoppingC__Custo__503BEA1C" Association="Self.FK__ShoppingC__Custo__503BEA1C">
       <End Role="Customers" EntitySet="Customers" />
       <End Role="ShoppingCart" EntitySet="ShoppingCart" />
     </AssociationSet>
-    <AssociationSet Name="FK__ShoppingC__Produ__17F790F9" Association="Self.FK__ShoppingC__Produ__17F790F9">
+    <AssociationSet Name="FK__ShoppingC__Produ__51300E55" Association="Self.FK__ShoppingC__Produ__51300E55">
       <End Role="Products" EntitySet="Products" />
       <End Role="ShoppingCart" EntitySet="ShoppingCart" />
     </AssociationSet>

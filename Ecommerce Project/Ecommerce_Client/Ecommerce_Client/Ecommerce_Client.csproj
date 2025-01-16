@@ -287,6 +287,7 @@
     <Content Include="Views\Customer\Register.cshtml" />
     <Content Include="Views\Cart\AccessDenied.cshtml" />
     <Content Include="Views\Order\AcceSSdenied.cshtml" />
+    <Content Include="Views\Customer\Signout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

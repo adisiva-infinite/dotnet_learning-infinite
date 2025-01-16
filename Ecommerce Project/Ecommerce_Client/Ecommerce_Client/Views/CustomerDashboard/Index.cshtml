@@ -48,7 +48,7 @@
 
             .slides img {
                 width: 100%;
-                height: 500px;
+                height: 300px;
                 object-fit: cover;
             }
 
@@ -74,69 +74,60 @@
     </style>
 </head>
 <body>
-    <!-- Navigation bar remains unchanged -->
-    <!-- Welcome Header -->
     <h2 class="text-center mb-4">Welcome to Customer Dashboard...!</h2>
 
     <!-- Display All Categories Button -->
     <div class="text-center mb-4">
-        <a href="@Url.Action("SelectCategory", "CustomerCategory")" class="btn btn-success">Display All Categories</a>
+        <a href="@Url.Action("SelectCategory", "CustomerCategory")" class="btn btn-success">Browse Categories</a>
     </div>
 
-    <!-- Slideshow -->
     <div class="slideshow-container">
-        <!-- Slide 1 -->
         <div class="slides">
-            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <img src="https://cmsimages.shoppersstop.com/bargain_web_4b36fbd532/bargain_web_4b36fbd532.png" alt="Mobile">
             <div class="caption">Discover the newest smartphones</div>
         </div>
         <div class="slides">
-            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <img src="https://cmsimages.shoppersstop.com/Adidas_web_e015b2d015/Adidas_web_e015b2d015.png" alt="Mobile">
             <div class="caption">Discover the newest smartphones</div>
         </div>
         <div class="slides">
-            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <img src="https://cmsimages.shoppersstop.com/Monte_home_web_3b18850c2d/Monte_home_web_3b18850c2d.png" alt="Mobile">
             <div class="caption">Discover the newest smartphones</div>
         </div>
         <div class="slides">
-            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <img src="https://cmsimages.shoppersstop.com/Libas_web_1febd47614/Libas_web_1febd47614.png" alt="Mobile">
             <div class="caption">Discover the newest smartphones</div>
         </div>
         <div class="slides">
-            <img src="~/Images/Mobile.jpg" alt="Mobile">
+            <img src="https://cmsimages.shoppersstop.com/Casio_static_web_90a08ea437/Casio_static_web_90a08ea437.png" alt="Mobile">
             <div class="caption">Discover the newest smartphones</div>
         </div>
-        <!-- Add more slides as needed -->
     </div>
 
-    <!-- Dot navigation -->
     <div class="dot-container">
         <span class="dot" onclick="currentSlide(1)"></span>
     </div>
 
-    <script>let slideIndex = 0;
+    <script>
+        let slideIndex = 0;
 
         function showSlides() {
             let slides = document.getElementsByClassName("slides");
             let dots = document.getElementsByClassName("dot");
 
-            // Hide all slides
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
 
-            // Reset slide index if it exceeds the number of slides
             slideIndex++;
             if (slideIndex > slides.length) {
                 slideIndex = 1;
             }
 
-            // Remove "active" class from all dots
             for (let i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
 
-            // Display the current slide and highlight the corresponding dot
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
 
@@ -144,7 +135,11 @@
             setTimeout(showSlides, 3000);
         }
 
-        // Initialize slideshow
-        showSlides();</script>
+        function currentSlide(n) {
+            slideIndex = n - 1; 
+            showSlides(); 
+        }
+        showSlides();
+    </script>
 </body>
 </html>

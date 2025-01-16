@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Ecommerce_Client.Controllers.Customer_Panel.CustomerOrderViewModel>
 @{ ViewBag.Title = "My Orders"; }
 
+
 <h2>My Orders</h2>
 
 @if (Model.Any())
@@ -8,7 +9,7 @@
     foreach (var order in Model)
     {
 <div class="order-section">
-    <h4>Order ID: @order.OrderId</h4>
+    @*<h4>Order ID: @order.OrderId</h4>*@
     <p>
         <strong>Order Date:</strong> @order.OrderDate.ToShortDateString() <br />
         <strong>Ship Date:</strong> @(order.ShipDate?.ToShortDateString() ?? "Not Shipped Yet")
@@ -33,28 +34,43 @@
         @if (!string.IsNullOrEmpty(detail.ProductImage))
         {
 <img src="@detail.ProductImage" alt="@detail.ProductName" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;" /> }
-                            else
-                            {
+else
+{
 <div style="width: 50px; height: 50px; background-color: #f0f0f0; border-radius: 5px; display: flex; align-items: center; justify-content: center;">No Image</div>}
     </td>
     <td>@detail.ProductName</td>
     <td>@detail.Quantity</td>
     <td>₹ @detail.UnitCost.ToString("N2")</td> <!-- Adds ₹ symbol with 2 decimal places -->
     <td>₹ @detail.TotalCost.ToString("N2")</td> <!-- Adds ₹ symbol with 2 decimal places -->
-</tr>                        }
+</tr>
+                   }
     </tbody>
 </table> }
-                    else
-                    {
+else
+{
 <p>No order details available for this order.</p>}
 </div>
-                    <hr /> }
-                                }
-                                else
-                                {
-                    <div class="alert alert-info">You have not placed any orders yet.</div>}
+                    <hr />
+ }
+            }
+            else
+            {
+<div class="alert alert-info">You have not placed any orders yet.</div>}
+<a href="@Url.Action("SelectCategory", "CustomerCategory")" class="back-button">Back</a>
+
 
 <style>
+    .back-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+    }
     .order-section {
         background-color: #fff;
         padding: 20px;

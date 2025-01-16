@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
+using System.Net;
 using System.Web.Mvc;
 using Ecommerce_Client.Models;
  
@@ -140,49 +142,93 @@ namespace Ecommerce_Client.Controllers.Admin_Panel
                 System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
                 return new HttpStatusCodeResult(500, "An error occurred while updating the product.");
             }
+        }  
+
+        //// GET: Product/Delete/5 (Delete product)
+        //public ActionResult Delete(int id)
+        //{
+        //    try
+        //    {
+        //        var product = db.Products.Find(id);
+        //        if (product == null)
+        //        {
+        //            return HttpNotFound();
+        //        }
+        //        return View(product);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
+        //        return new HttpStatusCodeResult(500, "An error occurred while preparing the delete product page.");
+        //    }
+        //}
+
+        //// POST: Product/Delete/5 (Confirm delete product)
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    try
+        //    {
+        //        var product = db.Products.Find(id);
+        //        if (product == null)
+        //        {
+        //            return HttpNotFound();
+        //        }
+
+        //        db.Products.Remove(product);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
+        //        return new HttpStatusCodeResult(500, "An error occurred while deleting the product.");
+        //    }
+        //}
+
+         // GET: Product/Delete/5
+    public ActionResult Delete(int? id)
+    {
+        if (id == null)
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         }
  
-        // GET: Product/Delete/5 (Delete product)
-        public ActionResult Delete(int id)
+        Product product = db.Products.Include(p => p.Category).FirstOrDefault(p => p.ProductId == id);
+        if (product == null)
         {
-            try
-            {
-                var product = db.Products.Find(id);
-                if (product == null)
-                {
-                    return HttpNotFound();
-                }
-                return View(product);
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
-                return new HttpStatusCodeResult(500, "An error occurred while preparing the delete product page.");
-            }
+            return HttpNotFound();
         }
  
-        // POST: Product/Delete/5 (Confirm delete product)
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            try
-            {
-                var product = db.Products.Find(id);
-                if (product == null)
-                {
-                    return HttpNotFound();
-                }
+        return View(product);
+    }
  
-                db.Products.Remove(product);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
+    // POST: Product/Delete/5
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public ActionResult DeleteConfirmed(int id)
+    {
+        Product product = db.Products.Find(id);
+ 
+        if (product == null)
+        {
+            return HttpNotFound();
+        }
+ 
+        db.Products.Remove(product);
+        db.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
             {
-                System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
-                return new HttpStatusCodeResult(500, "An error occurred while deleting the product.");
+                db.Dispose();
             }
+
+            base.Dispose(disposing);
         }
     }
 }

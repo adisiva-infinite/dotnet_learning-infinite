@@ -16,14 +16,11 @@ namespace Ecommerce_Client.Controllers.Customer_Panel
         {
             try
             {
-                // Check if the customer is logged in (i.e., CustomerId is in session)
                 if (Session["CustomerId"] == null)
                 {
-                    // If not logged in, redirect to login page
                     return RedirectToAction("Login", "CustomerLogin");
                 }
 
-                // If logged in, display the categories
                 var categories = db.Categories.ToList();
                 return View(categories);
             }
@@ -39,10 +36,8 @@ namespace Ecommerce_Client.Controllers.Customer_Panel
         {
             try
             {
-                // Check if the customer is logged in (i.e., CustomerId is in session)
                 if (Session["CustomerId"] == null)
                 {
-                    // If not logged in, redirect to login page
                     return RedirectToAction("Login", "CustomerLogin");
                 }
 
@@ -53,10 +48,8 @@ namespace Ecommerce_Client.Controllers.Customer_Panel
                     return HttpNotFound("Category not found.");
                 }
 
-                // Retrieve the products of that category
                 var products = db.Products.Where(p => p.CategoryId == categoryId).ToList();
 
-                // Pass the category name and the list of products to the view
                 ViewBag.CategoryName = category.CategoryName;
                 return View(products);
             }

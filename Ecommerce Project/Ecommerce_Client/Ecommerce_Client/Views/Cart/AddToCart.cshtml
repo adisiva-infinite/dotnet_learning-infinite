@@ -1,26 +1,96 @@
-﻿@model Ecommerce_Client.Models.Product
+﻿@model IEnumerable<Ecommerce_Client.Models.ShoppingCart>
 
-@{ ViewBag.Title = "Add to Cart"; }
+@{ ViewBag.Title = "Your Shopping Cart"; }
 
-<h2>@Model.ProductName</h2>
+<div class="container mt-5">
+    <div class="card p-4 shadow-lg">
+        <h2 class="text-center mb-4">Shopping Cart</h2>
+        @if (!Model.Any())
+        {
+<div class="alert alert-warning text-center" role="alert">
+    <p>Your cart is empty.</p>
+</div> }
+else
+{
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>PRODUCT DETAILS</th>
+            <th>QUANTITY</th>
+            <th>PRICE</th>
+            <th>TOTAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td class="d-flex align-items-center">
+        @if (!string.IsNullOrEmpty(item.Product.ProductImage))
+        {
+<img src="@item.Product.ProductImage" alt="@item.Product.ProductName" class="img-thumbnail mr-3" style="width: 80px; height: auto;" /> }
+else
+{
+<span>No Image</span>}
+        <div>
+            <p class="mb-1"><strong>@item.Product.ProductName</strong></p>
+            <p class="text-muted">PS4</p>
+            <form action="@Url.Action("RemoveFromCart", "Cart")" method="post" style="display:inline;">
+                <input type="hidden" name="recordId" value="@item.RecordId" />
+                <button type="submit" class="btn btn-link text-danger p-0">Remove</button>
+            </form>
+        </div>
+    </td>
+    <td>
+        <form action="@Url.Action("UpdateCart", "Cart")" method="post" id="form-@item.RecordId" style="display:flex; justify-content:center; align-items:center;">
+            <input type="hidden" name="recordId" value="@item.RecordId" />
+            <button type="button" class="btn btn-light btn-decrease" data-target="#quantity-@item.RecordId">-</button>
+            <input type="number" id="quantity-@item.RecordId" name="quantity" value="@item.Quantity" min="1" class="form-control text-center mx-2" style="width: 60px;" />
+            <button type="button" class="btn btn-light btn-increase" data-target="#quantity-@item.RecordId">+</button>
+        </form>
+    </td>
+    <td>₹@item.Product.UnitCost/-</td>
+    <td>₹@(item.Quantity * item.Product.UnitCost)/-</td>
+</tr>
+}
+    </tbody>
+</table>
 
-<div>
-    <img src="@Model.ProductImage" alt="@Model.ProductName" class="img-thumbnail" style="max-width: 300px;" />
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <h5><strong>Total Items: @Model.Count()</strong></h5>
+                    <h4>Total Price: <span class="text-success">₹@Model.Sum(i => i.Quantity * i.Product.UnitCost)/-</span></h4>
+                </div>
+                                <div class="text-left mt-3">
+                                    <a href="@Url.Action("SelectCategory", "CustomerCategory")" class="btn btn-link text-primary">← Continue Shopping</a>
+                                </div>
+                                                <div class="text-right">
+                                                    <a href="@Url.Action("Checkout", "Cart")" class="btn btn-success btn-lg">Proceed to Checkout</a>
+                                                </div>}
+    </div>
 </div>
 
-<h4>@Model.Description</h4>
-<p><strong>Price:</strong> @Model.UnitCost.ToString("C")</p>
+@section Scripts {
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            // Decrease quantity
+            document.querySelectorAll('.btn-decrease').forEach(button => {
+                button.addEventListener('click', function () {
+                    const target = document.querySelector(this.getAttribute('data-target'));
+                    if (target && parseInt(target.value) > 1) {
+                        target.value = parseInt(target.value) - 1;
+                        target.form.submit(); // Automatically submit the form
+                    }
+                });
+            });
 
-<form action="@Url.Action("AddToCart", "Cart")" method="post">
-    <input type="hidden" name="productId" value="@Model.ProductId" />
-    <div class="form-group">
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control" style="width: 60px;" />
-    </div>
-    <button type="submit" class="btn btn-primary">Add to Cart</button>
-</form>
-
-<hr />
-
-<a href="@Url.Action("Cart", "Cart")" class="btn btn-secondary">Go to Cart</a>
-<a href="@Url.Action("Index", "Home")" class="btn btn-primary">Continue Shopping</a>
+            // Increase quantity
+            document.querySelectorAll('.btn-increase').forEach(button => {
+                button.addEventListener('click', function () {
+                    const target = document.querySelector(this.getAttribute('data-target'));
+                    if (target) {
+                        target.value = parseInt(target.value) + 1;
+                        target.form.submit(); // Automatically submit the form
+                    }
+                });
+            });
+        });</script>
+}

@@ -104,7 +104,7 @@ namespace Ecommerce_Client.Controllers.Admin_Panel
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
-                throw; // Rethrow the exception if it occurs during disposal
+                throw; 
             }
         }
     }
